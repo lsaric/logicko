@@ -1,0 +1,96 @@
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe.config
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.pdb
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csprojResolveAssemblyReference.cache
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Login.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Properties.Resources.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csproj.GenerateResource.Cache
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.exe
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.pdb
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Administrator.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajZaposlenika.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Zaposlenici.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Tip_zaposlenja.resources
+c:\users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Dodaj_Tip_Zaposlenja.resources
+C:\Users\ivan\Documents\Visual Studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajSkladiste.resources
+C:\Users\ivan\Documents\Visual Studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.SkladistaPrikaz.resources
+C:\Users\ivan\Documents\Visual Studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljSkladista.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajStrojOpremu.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Strojevi_i_Oprema_Prikaz.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajTipProizvoda.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.TipProizvodaPrikaz.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajKupca.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.KupciPrikaz.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ReferentProdaje.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvodaca.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodacPrikaz.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljNabave.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajNarudzbenicu.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.NarudzbenicaPrikaz.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvod.resources
+C:\Users\ivan\documents\visual studio 2013\Projects\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodiPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe.config
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.exe
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.pdb
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.pdb
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csprojResolveAssemblyReference.cache
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Administrator.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajNarudzbenicu.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvod.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvodaca.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajKupca.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajSkladiste.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajStrojOpremu.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajTipProizvoda.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajZaposlenika.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Dodaj_Tip_Zaposlenja.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.KupciPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Login.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.NarudzbenicaPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodacPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodiPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Properties.Resources.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ReferentProdaje.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.SkladistaPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Strojevi_i_Oprema_Prikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.TipProizvodaPrikaz.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Tip_zaposlenja.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljNabave.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljSkladista.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Zaposlenici.resources
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csproj.GenerateResource.Cache
+C:\Users\KaNtA\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.KreirajRacun.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe.config
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.exe
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.pdb
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.pdb
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csprojResolveAssemblyReference.cache
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Administrator.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajNarudzbenicu.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvod.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajProizvodaca.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajKupca.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajSkladiste.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajStrojOpremu.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajTipProizvoda.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.DodajZaposlenika.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Dodaj_Tip_Zaposlenja.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.KreirajRacun.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.KupciPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Login.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.NarudzbenicaPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodacPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ProizvodiPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Properties.Resources.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.ReferentProdaje.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.SkladistaPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Strojevi_i_Oprema_Prikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.TipProizvodaPrikaz.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Tip_zaposlenja.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljNabave.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljSkladista.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Zaposlenici.resources
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csproj.GenerateResource.Cache
+C:\Users\ivan\Desktop\Aplikacija_ZUSMR\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Radnik.resources
