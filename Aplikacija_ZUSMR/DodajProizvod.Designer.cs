@@ -48,9 +48,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(47, 290);
+            this.btnUnos.Location = new System.Drawing.Point(26, 280);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(160, 290);
+            this.btnOdustani.Location = new System.Drawing.Point(153, 280);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 1;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -68,61 +68,61 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(135, 25);
+            this.txtID.Location = new System.Drawing.Point(87, 32);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(185, 20);
             this.txtID.TabIndex = 2;
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(135, 68);
+            this.txtNaziv.Location = new System.Drawing.Point(87, 80);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(185, 20);
             this.txtNaziv.TabIndex = 3;
             // 
             // txtCijena
             // 
-            this.txtCijena.Location = new System.Drawing.Point(135, 106);
+            this.txtCijena.Location = new System.Drawing.Point(87, 106);
             this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(100, 20);
+            this.txtCijena.Size = new System.Drawing.Size(185, 20);
             this.txtCijena.TabIndex = 4;
             // 
             // txtKolicina
             // 
-            this.txtKolicina.Location = new System.Drawing.Point(135, 142);
+            this.txtKolicina.Location = new System.Drawing.Point(87, 135);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(100, 20);
+            this.txtKolicina.Size = new System.Drawing.Size(185, 20);
             this.txtKolicina.TabIndex = 5;
             // 
             // cmbProizvodac
             // 
             this.cmbProizvodac.FormattingEnabled = true;
-            this.cmbProizvodac.Location = new System.Drawing.Point(135, 182);
+            this.cmbProizvodac.Location = new System.Drawing.Point(87, 182);
             this.cmbProizvodac.Name = "cmbProizvodac";
-            this.cmbProizvodac.Size = new System.Drawing.Size(121, 21);
+            this.cmbProizvodac.Size = new System.Drawing.Size(185, 21);
             this.cmbProizvodac.TabIndex = 6;
             // 
             // cmbTip
             // 
             this.cmbTip.FormattingEnabled = true;
-            this.cmbTip.Location = new System.Drawing.Point(135, 209);
+            this.cmbTip.Location = new System.Drawing.Point(87, 209);
             this.cmbTip.Name = "cmbTip";
-            this.cmbTip.Size = new System.Drawing.Size(121, 21);
+            this.cmbTip.Size = new System.Drawing.Size(185, 21);
             this.cmbTip.TabIndex = 7;
             // 
             // cmbSkladiste
             // 
             this.cmbSkladiste.FormattingEnabled = true;
-            this.cmbSkladiste.Location = new System.Drawing.Point(135, 236);
+            this.cmbSkladiste.Location = new System.Drawing.Point(87, 236);
             this.cmbSkladiste.Name = "cmbSkladiste";
-            this.cmbSkladiste.Size = new System.Drawing.Size(121, 21);
+            this.cmbSkladiste.Size = new System.Drawing.Size(185, 21);
             this.cmbSkladiste.TabIndex = 8;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(13, 31);
+            this.lblID.Location = new System.Drawing.Point(13, 32);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 9;
@@ -131,7 +131,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(12, 68);
+            this.lblNaziv.Location = new System.Drawing.Point(12, 80);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(34, 13);
             this.lblNaziv.TabIndex = 10;
@@ -149,7 +149,7 @@
             // lblKolicina
             // 
             this.lblKolicina.AutoSize = true;
-            this.lblKolicina.Location = new System.Drawing.Point(12, 142);
+            this.lblKolicina.Location = new System.Drawing.Point(12, 135);
             this.lblKolicina.Name = "lblKolicina";
             this.lblKolicina.Size = new System.Drawing.Size(44, 13);
             this.lblKolicina.TabIndex = 12;
@@ -158,7 +158,7 @@
             // lblNazivProizvodaca
             // 
             this.lblNazivProizvodaca.AutoSize = true;
-            this.lblNazivProizvodaca.Location = new System.Drawing.Point(13, 182);
+            this.lblNazivProizvodaca.Location = new System.Drawing.Point(12, 182);
             this.lblNazivProizvodaca.Name = "lblNazivProizvodaca";
             this.lblNazivProizvodaca.Size = new System.Drawing.Size(60, 13);
             this.lblNazivProizvodaca.TabIndex = 13;

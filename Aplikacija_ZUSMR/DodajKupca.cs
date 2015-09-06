@@ -39,5 +39,10 @@ namespace Aplikacija_ZUSMR
         {
             this.Close();
         }
+
+        private void txtNaziv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

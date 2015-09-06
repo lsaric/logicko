@@ -38,9 +38,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(39, 190);
+            this.btnUnos.Location = new System.Drawing.Point(30, 190);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -48,23 +48,24 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(119, 52);
+            this.txtID.Location = new System.Drawing.Point(77, 57);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(186, 20);
             this.txtID.TabIndex = 1;
             // 
             // txtTip
             // 
-            this.txtTip.Location = new System.Drawing.Point(119, 125);
+            this.txtTip.Location = new System.Drawing.Point(77, 93);
+            this.txtTip.Multiline = true;
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(100, 20);
+            this.txtTip.Size = new System.Drawing.Size(186, 51);
             this.txtTip.TabIndex = 2;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(33, 58);
+            this.lblID.Location = new System.Drawing.Point(27, 57);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 3;
@@ -73,7 +74,7 @@
             // lblTip
             // 
             this.lblTip.AutoSize = true;
-            this.lblTip.Location = new System.Drawing.Point(36, 125);
+            this.lblTip.Location = new System.Drawing.Point(27, 93);
             this.lblTip.Name = "lblTip";
             this.lblTip.Size = new System.Drawing.Size(22, 13);
             this.lblTip.TabIndex = 4;
@@ -81,9 +82,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(144, 190);
+            this.btnOdustani.Location = new System.Drawing.Point(155, 190);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 5;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;

@@ -40,9 +40,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(13, 193);
+            this.btnUnos.Location = new System.Drawing.Point(21, 171);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(107, 193);
+            this.btnUredi.Location = new System.Drawing.Point(152, 171);
             this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(75, 23);
+            this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 1;
             this.btnUredi.Text = "Uredi";
             this.btnUredi.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@
             // 
             // btnObrisi
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(207, 193);
+            this.btnObrisi.Location = new System.Drawing.Point(152, 210);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
+            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
             this.btnObrisi.TabIndex = 2;
             this.btnObrisi.Text = "Obrisi";
             this.btnObrisi.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // 
             // btnOsvjezi
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(13, 227);
+            this.btnOsvjezi.Location = new System.Drawing.Point(21, 210);
             this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
             this.btnOsvjezi.TabIndex = 3;
             this.btnOsvjezi.Text = "Osvjezi";
             this.btnOsvjezi.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             this.dgvTipProizvoda.Location = new System.Drawing.Point(13, 3);
             this.dgvTipProizvoda.Name = "dgvTipProizvoda";
             this.dgvTipProizvoda.ReadOnly = true;
-            this.dgvTipProizvoda.Size = new System.Drawing.Size(260, 150);
+            this.dgvTipProizvoda.Size = new System.Drawing.Size(259, 150);
             this.dgvTipProizvoda.TabIndex = 4;
             // 
             // ID_tip
@@ -96,12 +96,14 @@
             this.ID_tip.HeaderText = "ID";
             this.ID_tip.Name = "ID_tip";
             this.ID_tip.ReadOnly = true;
+            this.ID_tip.Width = 60;
             // 
             // Tip
             // 
             this.Tip.HeaderText = "Tip";
             this.Tip.Name = "Tip";
             this.Tip.ReadOnly = true;
+            this.Tip.Width = 150;
             // 
             // TipProizvodaPrikaz
             // 

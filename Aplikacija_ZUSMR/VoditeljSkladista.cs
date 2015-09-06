@@ -34,5 +34,17 @@ namespace Aplikacija_ZUSMR
             TipProizvodaPrikaz TipProizvodaPr = new TipProizvodaPrikaz();
             TipProizvodaPr.Show();
         }
+
+        private void pretragaProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nmbOd pr = new nmbOd();
+            pr.Show();
+        }
+
+        private void prikazStanjaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdajaProizvodaGraf ppg = new ProdajaProizvodaGraf();
+            ppg.Show();
+        }
     }
 }

@@ -40,9 +40,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(63, 191);
+            this.btnUnos.Location = new System.Drawing.Point(30, 195);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(171, 191);
+            this.btnOdustani.Location = new System.Drawing.Point(151, 195);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 1;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(39, 54);
+            this.lblID.Location = new System.Drawing.Point(27, 39);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -70,7 +70,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(39, 96);
+            this.lblNaziv.Location = new System.Drawing.Point(27, 68);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(34, 13);
             this.lblNaziv.TabIndex = 3;
@@ -79,7 +79,7 @@
             // lblKapacitet
             // 
             this.lblKapacitet.AutoSize = true;
-            this.lblKapacitet.Location = new System.Drawing.Point(39, 135);
+            this.lblKapacitet.Location = new System.Drawing.Point(27, 138);
             this.lblKapacitet.Name = "lblKapacitet";
             this.lblKapacitet.Size = new System.Drawing.Size(52, 13);
             this.lblKapacitet.TabIndex = 4;
@@ -87,24 +87,25 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(114, 54);
+            this.txtID.Location = new System.Drawing.Point(102, 39);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(157, 20);
             this.txtID.TabIndex = 5;
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(114, 96);
+            this.txtNaziv.Location = new System.Drawing.Point(102, 68);
+            this.txtNaziv.Multiline = true;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(157, 64);
             this.txtNaziv.TabIndex = 6;
             // 
             // txtKapacitet
             // 
-            this.txtKapacitet.Location = new System.Drawing.Point(114, 135);
+            this.txtKapacitet.Location = new System.Drawing.Point(102, 138);
             this.txtKapacitet.Name = "txtKapacitet";
-            this.txtKapacitet.Size = new System.Drawing.Size(100, 20);
+            this.txtKapacitet.Size = new System.Drawing.Size(157, 20);
             this.txtKapacitet.TabIndex = 7;
             // 
             // DodajSkladiste

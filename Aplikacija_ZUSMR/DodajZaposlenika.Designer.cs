@@ -48,61 +48,61 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(86, 23);
+            this.txtID.Location = new System.Drawing.Point(97, 23);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(167, 20);
             this.txtID.TabIndex = 0;
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(86, 63);
+            this.txtIme.Location = new System.Drawing.Point(97, 63);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(100, 20);
+            this.txtIme.Size = new System.Drawing.Size(167, 20);
             this.txtIme.TabIndex = 1;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(86, 101);
+            this.txtPrezime.Location = new System.Drawing.Point(97, 89);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(100, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(167, 20);
             this.txtPrezime.TabIndex = 2;
             // 
             // txtKorisnicko
             // 
-            this.txtKorisnicko.Location = new System.Drawing.Point(86, 142);
+            this.txtKorisnicko.Location = new System.Drawing.Point(97, 115);
             this.txtKorisnicko.Name = "txtKorisnicko";
-            this.txtKorisnicko.Size = new System.Drawing.Size(100, 20);
+            this.txtKorisnicko.Size = new System.Drawing.Size(167, 20);
             this.txtKorisnicko.TabIndex = 3;
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(86, 180);
+            this.txtLozinka.Location = new System.Drawing.Point(97, 141);
             this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(100, 20);
+            this.txtLozinka.Size = new System.Drawing.Size(167, 20);
             this.txtLozinka.TabIndex = 4;
             // 
             // cmbTipZaposlenja
             // 
             this.cmbTipZaposlenja.FormattingEnabled = true;
-            this.cmbTipZaposlenja.Location = new System.Drawing.Point(86, 218);
+            this.cmbTipZaposlenja.Location = new System.Drawing.Point(110, 204);
             this.cmbTipZaposlenja.Name = "cmbTipZaposlenja";
-            this.cmbTipZaposlenja.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipZaposlenja.Size = new System.Drawing.Size(154, 21);
             this.cmbTipZaposlenja.TabIndex = 5;
             // 
             // cmbSkladiste
             // 
             this.cmbSkladiste.FormattingEnabled = true;
-            this.cmbSkladiste.Location = new System.Drawing.Point(86, 258);
+            this.cmbSkladiste.Location = new System.Drawing.Point(110, 232);
             this.cmbSkladiste.Name = "cmbSkladiste";
-            this.cmbSkladiste.Size = new System.Drawing.Size(121, 21);
+            this.cmbSkladiste.Size = new System.Drawing.Size(154, 21);
             this.cmbSkladiste.TabIndex = 6;
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(86, 297);
+            this.btnUnos.Location = new System.Drawing.Point(25, 287);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 7;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(197, 297);
+            this.btnOdustani.Location = new System.Drawing.Point(156, 287);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 8;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             // lblIme
             // 
             this.lblIme.AutoSize = true;
-            this.lblIme.Location = new System.Drawing.Point(13, 70);
+            this.lblIme.Location = new System.Drawing.Point(13, 63);
             this.lblIme.Name = "lblIme";
             this.lblIme.Size = new System.Drawing.Size(24, 13);
             this.lblIme.TabIndex = 10;
@@ -139,7 +139,7 @@
             // lblPrezime
             // 
             this.lblPrezime.AutoSize = true;
-            this.lblPrezime.Location = new System.Drawing.Point(13, 104);
+            this.lblPrezime.Location = new System.Drawing.Point(12, 89);
             this.lblPrezime.Name = "lblPrezime";
             this.lblPrezime.Size = new System.Drawing.Size(44, 13);
             this.lblPrezime.TabIndex = 11;
@@ -148,7 +148,7 @@
             // lblKorisnicko
             // 
             this.lblKorisnicko.AutoSize = true;
-            this.lblKorisnicko.Location = new System.Drawing.Point(13, 145);
+            this.lblKorisnicko.Location = new System.Drawing.Point(12, 115);
             this.lblKorisnicko.Name = "lblKorisnicko";
             this.lblKorisnicko.Size = new System.Drawing.Size(75, 13);
             this.lblKorisnicko.TabIndex = 12;
@@ -157,7 +157,7 @@
             // lblLozinka
             // 
             this.lblLozinka.AutoSize = true;
-            this.lblLozinka.Location = new System.Drawing.Point(13, 187);
+            this.lblLozinka.Location = new System.Drawing.Point(13, 141);
             this.lblLozinka.Name = "lblLozinka";
             this.lblLozinka.Size = new System.Drawing.Size(44, 13);
             this.lblLozinka.TabIndex = 13;
@@ -166,7 +166,7 @@
             // lblTip
             // 
             this.lblTip.AutoSize = true;
-            this.lblTip.Location = new System.Drawing.Point(13, 226);
+            this.lblTip.Location = new System.Drawing.Point(13, 204);
             this.lblTip.Name = "lblTip";
             this.lblTip.Size = new System.Drawing.Size(75, 13);
             this.lblTip.TabIndex = 14;
@@ -175,7 +175,7 @@
             // lblSkladiste
             // 
             this.lblSkladiste.AutoSize = true;
-            this.lblSkladiste.Location = new System.Drawing.Point(13, 266);
+            this.lblSkladiste.Location = new System.Drawing.Point(13, 232);
             this.lblSkladiste.Name = "lblSkladiste";
             this.lblSkladiste.Size = new System.Drawing.Size(78, 13);
             this.lblSkladiste.TabIndex = 15;

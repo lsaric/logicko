@@ -41,16 +41,16 @@
             // cmbNaziv
             // 
             this.cmbNaziv.FormattingEnabled = true;
-            this.cmbNaziv.Location = new System.Drawing.Point(130, 148);
+            this.cmbNaziv.Location = new System.Drawing.Point(124, 134);
             this.cmbNaziv.Name = "cmbNaziv";
-            this.cmbNaziv.Size = new System.Drawing.Size(121, 21);
+            this.cmbNaziv.Size = new System.Drawing.Size(139, 21);
             this.cmbNaziv.TabIndex = 0;
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(43, 196);
+            this.btnUnos.Location = new System.Drawing.Point(28, 196);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 1;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(157, 196);
+            this.btnOdustani.Location = new System.Drawing.Point(155, 196);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 2;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 54);
+            this.label1.Location = new System.Drawing.Point(25, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 3;
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 94);
+            this.label2.Location = new System.Drawing.Point(25, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(31, 151);
+            this.lblNaziv.Location = new System.Drawing.Point(25, 134);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(78, 13);
             this.lblNaziv.TabIndex = 5;
@@ -95,17 +95,18 @@
             // 
             // txtTip
             // 
-            this.txtTip.Location = new System.Drawing.Point(130, 94);
+            this.txtTip.Location = new System.Drawing.Point(124, 73);
+            this.txtTip.Multiline = true;
             this.txtTip.Name = "txtTip";
-            this.txtTip.Size = new System.Drawing.Size(121, 20);
+            this.txtTip.Size = new System.Drawing.Size(139, 54);
             this.txtTip.TabIndex = 6;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(130, 54);
+            this.txtID.Location = new System.Drawing.Point(124, 47);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.Size = new System.Drawing.Size(139, 20);
             this.txtID.TabIndex = 7;
             // 
             // DodajStrojOpremu

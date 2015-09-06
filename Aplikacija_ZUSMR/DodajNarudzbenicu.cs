@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,16 +38,24 @@ namespace Aplikacija_ZUSMR
         {
            if (U == 1)
             {
-
+                string sadrzaj = "Poštovani, \n \n Ovo je automatski generirana poruka prilikom narudžbe proizvoda. \n \n";
                 if (lstNarudzba.Items.Count > 0)
                 {
-                    string sqlUpit = "insert into Narudzbenica values ('" + dateTimePicker1.Value.ToString("yyyy-MM-dd hh:mm:ss.mmm") + "',(Select ID_zaposlenik from Zaposlenici where KorisnickoIme ='"+Login.KorisnickoIme+"' ))";
+                    string sqlUpit = "insert into Narudzbenica values ('" + dateTimePicker1.Value.ToString("yyyy-MM-dd hh:mm:ss.mmm") + "',(Select ID_zaposlenik from Zaposlenici where KorisnickoIme ='"+Login.KorisnickoIme+"' ),'"+txtKontakt.Text+"')";
                     Baza.Instance.IzvrsavanjeUpita(sqlUpit);
 
+                    sadrzaj += " \n Rok : " + dateTimePicker1.Value.ToString("yyyy-MM-dd hh:mm:ss.mmm");
+                    sadrzaj += " \n Ukupno naručeno proizvoda je : " + lstNarudzba.Items.Count;
                     for (int i = 0; i < lstNarudzba.Items.Count; i++)
                     {
                         int id = int.Parse(lstNarudzba.Items[i].SubItems[0].Text);
+                        string naziv = lstNarudzba.Items[i].SubItems[1].Text;
                         int kol = int.Parse(lstNarudzba.Items[i].SubItems[2].Text);
+
+                        sadrzaj += "\n \n" + (i + 1) + ". proizvod: ";
+                        sadrzaj += "\n ID : " + id;
+                        sadrzaj += "\n Naziv : " + naziv;
+                        sadrzaj += "\n Količine: " + kol;
 
                         string upit = "insert into Narudzbenica_Proizvod values((SELECT MAX(ID_narudzbenice) FROM Narudzbenica)," + id + "," + kol + ")";
                         Baza.Instance.IzvrsavanjeUpita(upit);
@@ -54,6 +63,9 @@ namespace Aplikacija_ZUSMR
                         Baza.Instance.IzvrsavanjeUpita(upit);
                     }
 
+                    sadrzaj += "\n \n Kreirano : " + System.DateTime.Now;
+
+                    slanjeMaila(sadrzaj, txtKontakt.Text);
 
                     this.Close();
                 }
@@ -61,7 +73,7 @@ namespace Aplikacija_ZUSMR
            else if (U == 2)
            {
 
-               string upit = "UPDATE Narudzbenica SET Datum = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd hh:mm:ss.mmm") + "', ID_zaposlenik = (Select ID_zaposlenik from Zaposlenici where KorisnickoIme ='" + Login.KorisnickoIme + "' ) WHERE  ID_narudzbenice= " + int.Parse(txtID.Text.ToString());
+               string upit = "UPDATE Narudzbenica SET Datum = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd hh:mm:ss.mmm") + "', ID_zaposlenik = (Select ID_zaposlenik from Zaposlenici where KorisnickoIme ='" + Login.KorisnickoIme + "' ), Kontakt_dobavljvaca = '"+txtKontakt.Text+"' WHERE  ID_narudzbenice= " + int.Parse(txtID.Text.ToString());
                Baza.Instance.IzvrsavanjeUpita(upit);
                this.Close();
            }
@@ -130,5 +142,39 @@ namespace Aplikacija_ZUSMR
             }
 
         }
+
+        private void slanjeMaila(string sadrzaj, string primatelj)
+        {
+
+            try
+            {
+                SmtpClient client = new SmtpClient();
+                client.Port = 587;
+                client.Host = "smtp.gmail.com";
+                client.EnableSsl = true;
+                client.Timeout = 10000;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new System.Net.NetworkCredential("AplikacijaZUSMR@gmail.com", "aplikacija");
+
+
+                MailMessage mm = new MailMessage("donotreply@domain.com", primatelj);
+
+                mm.Subject = "Obavijest narudžbi!";
+                mm.Body = sadrzaj;
+
+                mm.BodyEncoding = UTF8Encoding.UTF8;
+                mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+                client.Send(mm);
+            }
+            catch (Exception)
+            {
+
+            }
+
+        } //kraj metode slanja poruke
+
+
     }
 }

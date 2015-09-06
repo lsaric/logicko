@@ -19,7 +19,7 @@ namespace Aplikacija_ZUSMR
 
         private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProizvodiPrikaz proizvodprikaz = new ProizvodiPrikaz();
+            nmbOd proizvodprikaz = new nmbOd();
             proizvodprikaz.Show();
         }
     }

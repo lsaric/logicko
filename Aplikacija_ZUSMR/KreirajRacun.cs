@@ -174,9 +174,9 @@ namespace Aplikacija_ZUSMR
                         if (ostalo < 15)
                         {
 
-                            poruka = " \n \n Šifra prozivoda: "
+                            poruka += " \n \n Šifra prozivoda: "
                                       + id_pr + " \n \n Naziv proizvoda: " + lstProizvodi.Items[j].SubItems[1].Text +
-                                      " \n \n jer je preostalo " + ostalo + " na skladištu.";
+                                      " \n \n jer je preostalo " + ostalo + "zaliha na skladištu.";
 
                             salji = true;
                         } //ako je kolicina manja od 15

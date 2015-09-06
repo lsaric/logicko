@@ -30,9 +30,9 @@ namespace Aplikacija_ZUSMR
                 db.Kolicina = int.Parse(dr["Kolicina"].ToString());
                 if (tip == 1)
                 {
-                    db.NazivProizvodaca = dr["Naziv"].ToString();
+                    db.NazivProizvodaca = dr["Skladiste"].ToString();
                     db.Tip = dr["Tip"].ToString();
-                    db.NazivSkladista = dr["Naziv"].ToString();
+                    db.NazivSkladista = dr["Proizvodac"].ToString();
                     
                 }
 

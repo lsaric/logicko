@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GoogleChartSharp, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GoogleChartSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -132,6 +136,12 @@
     <Compile Include="NarudzbenicaPrikaz.Designer.cs">
       <DependentUpon>NarudzbenicaPrikaz.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdajaProizvodaGraf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdajaProizvodaGraf.Designer.cs">
+      <DependentUpon>ProdajaProizvodaGraf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Proizvod.cs" />
     <Compile Include="Proizvodac.cs" />
@@ -187,6 +197,12 @@
     </Compile>
     <Compile Include="Tip_zaposlenja.Designer.cs">
       <DependentUpon>Tip_zaposlenja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGraph.Designer.cs">
+      <DependentUpon>ucGraph.cs</DependentUpon>
     </Compile>
     <Compile Include="VoditeljNabave.cs">
       <SubType>Form</SubType>
@@ -249,6 +265,9 @@
     <EmbeddedResource Include="NarudzbenicaPrikaz.resx">
       <DependentUpon>NarudzbenicaPrikaz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProdajaProizvodaGraf.resx">
+      <DependentUpon>ProdajaProizvodaGraf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProizvodacPrikaz.resx">
       <DependentUpon>ProizvodacPrikaz.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +301,9 @@
     <EmbeddedResource Include="Tip_zaposlenja.resx">
       <DependentUpon>Tip_zaposlenja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucGraph.resx">
+      <DependentUpon>ucGraph.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VoditeljNabave.resx">
       <DependentUpon>VoditeljNabave.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +325,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GoogleChartSharp.dll" />
+    <Content Include="GoogleChartSharp.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

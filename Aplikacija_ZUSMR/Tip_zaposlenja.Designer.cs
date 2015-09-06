@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvTipZaposlenja = new System.Windows.Forms.DataGridView();
-            this.ID_zaposlenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
             this.btnOsvjezi = new System.Windows.Forms.Button();
+            this.ID_zaposlenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipZaposlenja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,11 +45,51 @@
             this.dgvTipZaposlenja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_zaposlenja,
             this.Opis});
-            this.dgvTipZaposlenja.Location = new System.Drawing.Point(32, 3);
+            this.dgvTipZaposlenja.Location = new System.Drawing.Point(4, 12);
             this.dgvTipZaposlenja.Name = "dgvTipZaposlenja";
             this.dgvTipZaposlenja.ReadOnly = true;
-            this.dgvTipZaposlenja.Size = new System.Drawing.Size(278, 150);
+            this.dgvTipZaposlenja.Size = new System.Drawing.Size(347, 150);
             this.dgvTipZaposlenja.TabIndex = 0;
+            // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Location = new System.Drawing.Point(56, 178);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(108, 33);
+            this.btnDodaj.TabIndex = 1;
+            this.btnDodaj.Text = "Unos";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
+            // btnUredi
+            // 
+            this.btnUredi.Location = new System.Drawing.Point(184, 178);
+            this.btnUredi.Name = "btnUredi";
+            this.btnUredi.Size = new System.Drawing.Size(108, 33);
+            this.btnUredi.TabIndex = 2;
+            this.btnUredi.Text = "Uredi";
+            this.btnUredi.UseVisualStyleBackColor = true;
+            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(184, 217);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
+            this.btnObrisi.TabIndex = 3;
+            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // btnOsvjezi
+            // 
+            this.btnOsvjezi.Location = new System.Drawing.Point(56, 217);
+            this.btnOsvjezi.Name = "btnOsvjezi";
+            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
+            this.btnOsvjezi.TabIndex = 4;
+            this.btnOsvjezi.Text = "Osvjezi";
+            this.btnOsvjezi.UseVisualStyleBackColor = true;
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
             // 
             // ID_zaposlenja
             // 
@@ -62,52 +102,13 @@
             this.Opis.HeaderText = "Opis";
             this.Opis.Name = "Opis";
             this.Opis.ReadOnly = true;
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.Location = new System.Drawing.Point(53, 199);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 23);
-            this.btnDodaj.TabIndex = 1;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
-            // 
-            // btnUredi
-            // 
-            this.btnUredi.Location = new System.Drawing.Point(134, 199);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(75, 23);
-            this.btnUredi.TabIndex = 2;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = true;
-            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(224, 199);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(134, 228);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(75, 23);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            this.Opis.Width = 200;
             // 
             // Tip_zaposlenja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 262);
+            this.ClientSize = new System.Drawing.Size(351, 262);
             this.Controls.Add(this.btnOsvjezi);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
@@ -126,8 +127,8 @@
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_zaposlenja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opis;
-        private System.Windows.Forms.Button btnOsvjezi;
     }
 }

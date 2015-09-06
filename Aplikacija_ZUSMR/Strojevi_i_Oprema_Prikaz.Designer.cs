@@ -41,9 +41,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(108, 170);
+            this.btnUnos.Location = new System.Drawing.Point(50, 170);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(189, 170);
+            this.btnUredi.Location = new System.Drawing.Point(184, 170);
             this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(75, 23);
+            this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 1;
             this.btnUredi.Text = "Uredi";
             this.btnUredi.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             // btnObrisi
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(270, 170);
+            this.btnObrisi.Location = new System.Drawing.Point(184, 209);
             this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
+            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
             this.btnObrisi.TabIndex = 2;
             this.btnObrisi.Text = "Obrisi";
             this.btnObrisi.UseVisualStyleBackColor = true;
@@ -71,9 +71,9 @@
             // 
             // btnOsvjezi
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(1, 170);
+            this.btnOsvjezi.Location = new System.Drawing.Point(50, 209);
             this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
             this.btnOsvjezi.TabIndex = 3;
             this.btnOsvjezi.Text = "Osvjezi";
             this.btnOsvjezi.UseVisualStyleBackColor = true;
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 262);
+            this.ClientSize = new System.Drawing.Size(345, 262);
             this.Controls.Add(this.dgvStrojevi);
             this.Controls.Add(this.btnOsvjezi);
             this.Controls.Add(this.btnObrisi);

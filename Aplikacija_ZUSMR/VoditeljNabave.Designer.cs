@@ -37,41 +37,49 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.narudzbenicaToolStripMenuItem,
             this.proizvodacToolStripMenuItem,
             this.proizvodiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(252, 262);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // narudzbenicaToolStripMenuItem
             // 
+            this.narudzbenicaToolStripMenuItem.AutoSize = false;
             this.narudzbenicaToolStripMenuItem.Name = "narudzbenicaToolStripMenuItem";
-            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.narudzbenicaToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(80, 258);
             this.narudzbenicaToolStripMenuItem.Text = "Narudzbenica";
             this.narudzbenicaToolStripMenuItem.Click += new System.EventHandler(this.narudzbenicaToolStripMenuItem_Click);
             // 
             // proizvodacToolStripMenuItem
             // 
+            this.proizvodacToolStripMenuItem.AutoSize = false;
             this.proizvodacToolStripMenuItem.Name = "proizvodacToolStripMenuItem";
-            this.proizvodacToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.proizvodacToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.proizvodacToolStripMenuItem.Size = new System.Drawing.Size(80, 258);
             this.proizvodacToolStripMenuItem.Text = "Proizvodac";
             this.proizvodacToolStripMenuItem.Click += new System.EventHandler(this.proizvodacToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
+            this.proizvodiToolStripMenuItem.AutoSize = false;
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.proizvodiToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(80, 258);
             this.proizvodiToolStripMenuItem.Text = "Proizvodi";
+            this.proizvodiToolStripMenuItem.Click += new System.EventHandler(this.proizvodiToolStripMenuItem_Click);
             // 
             // VoditeljNabave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(252, 262);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VoditeljNabave";

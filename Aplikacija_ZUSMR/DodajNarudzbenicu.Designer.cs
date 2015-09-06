@@ -37,22 +37,24 @@
             this.nmKolicina = new System.Windows.Forms.NumericUpDown();
             this.lblKolicina = new System.Windows.Forms.Label();
             this.lstProizvodi = new System.Windows.Forms.ListView();
-            this.lstNarudzba = new System.Windows.Forms.ListView();
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.btnUkloni = new System.Windows.Forms.Button();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lstNarudzba = new System.Windows.Forms.ListView();
             this.ID_ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Naziv_ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Kolicina = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnUkloni = new System.Windows.Forms.Button();
+            this.txtKontakt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmKolicina)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(154, 318);
+            this.btnUnos.Location = new System.Drawing.Point(170, 301);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(249, 318);
+            this.btnOdustani.Location = new System.Drawing.Point(316, 301);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 1;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -71,7 +73,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(42, 35);
+            this.lblID.Location = new System.Drawing.Point(12, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -80,7 +82,7 @@
             // lblDatum
             // 
             this.lblDatum.AutoSize = true;
-            this.lblDatum.Location = new System.Drawing.Point(42, 75);
+            this.lblDatum.Location = new System.Drawing.Point(12, 80);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(38, 13);
             this.lblDatum.TabIndex = 3;
@@ -88,35 +90,35 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(124, 28);
+            this.txtID.Location = new System.Drawing.Point(61, 24);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.Size = new System.Drawing.Size(173, 20);
             this.txtID.TabIndex = 6;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(124, 67);
+            this.dateTimePicker1.Location = new System.Drawing.Point(61, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(173, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // nmKolicina
             // 
-            this.nmKolicina.Location = new System.Drawing.Point(124, 164);
+            this.nmKolicina.Location = new System.Drawing.Point(368, 74);
             this.nmKolicina.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.nmKolicina.Name = "nmKolicina";
-            this.nmKolicina.Size = new System.Drawing.Size(120, 20);
+            this.nmKolicina.Size = new System.Drawing.Size(219, 20);
             this.nmKolicina.TabIndex = 10;
             // 
             // lblKolicina
             // 
             this.lblKolicina.AutoSize = true;
-            this.lblKolicina.Location = new System.Drawing.Point(42, 164);
+            this.lblKolicina.Location = new System.Drawing.Point(300, 74);
             this.lblKolicina.Name = "lblKolicina";
             this.lblKolicina.Size = new System.Drawing.Size(44, 13);
             this.lblKolicina.TabIndex = 11;
@@ -127,45 +129,12 @@
             this.lstProizvodi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.Naziv});
-            this.lstProizvodi.Location = new System.Drawing.Point(45, 202);
+            this.lstProizvodi.Location = new System.Drawing.Point(12, 140);
             this.lstProizvodi.Name = "lstProizvodi";
-            this.lstProizvodi.Size = new System.Drawing.Size(131, 97);
+            this.lstProizvodi.Size = new System.Drawing.Size(219, 150);
             this.lstProizvodi.TabIndex = 12;
             this.lstProizvodi.UseCompatibleStateImageBehavior = false;
             this.lstProizvodi.View = System.Windows.Forms.View.Details;
-            // 
-            // lstNarudzba
-            // 
-            this.lstNarudzba.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID_,
-            this.Naziv_,
-            this.Kolicina});
-            this.lstNarudzba.Location = new System.Drawing.Point(306, 202);
-            this.lstNarudzba.Name = "lstNarudzba";
-            this.lstNarudzba.Size = new System.Drawing.Size(165, 97);
-            this.lstNarudzba.TabIndex = 13;
-            this.lstNarudzba.UseCompatibleStateImageBehavior = false;
-            this.lstNarudzba.View = System.Windows.Forms.View.Details;
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.Location = new System.Drawing.Point(200, 214);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 23);
-            this.btnDodaj.TabIndex = 14;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
-            // 
-            // btnUkloni
-            // 
-            this.btnUkloni.Location = new System.Drawing.Point(200, 265);
-            this.btnUkloni.Name = "btnUkloni";
-            this.btnUkloni.Size = new System.Drawing.Size(75, 23);
-            this.btnUkloni.TabIndex = 15;
-            this.btnUkloni.Text = "Ukloni";
-            this.btnUkloni.UseVisualStyleBackColor = true;
-            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
             // 
             // ID
             // 
@@ -175,6 +144,19 @@
             // 
             this.Naziv.Text = "Naziv";
             this.Naziv.Width = 66;
+            // 
+            // lstNarudzba
+            // 
+            this.lstNarudzba.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID_,
+            this.Naziv_,
+            this.Kolicina});
+            this.lstNarudzba.Location = new System.Drawing.Point(368, 140);
+            this.lstNarudzba.Name = "lstNarudzba";
+            this.lstNarudzba.Size = new System.Drawing.Size(219, 150);
+            this.lstNarudzba.TabIndex = 13;
+            this.lstNarudzba.UseCompatibleStateImageBehavior = false;
+            this.lstNarudzba.View = System.Windows.Forms.View.Details;
             // 
             // ID_
             // 
@@ -189,11 +171,50 @@
             // 
             this.Kolicina.Text = "Količina";
             // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Location = new System.Drawing.Point(240, 173);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(117, 25);
+            this.btnDodaj.TabIndex = 14;
+            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
+            // btnUkloni
+            // 
+            this.btnUkloni.Location = new System.Drawing.Point(240, 215);
+            this.btnUkloni.Name = "btnUkloni";
+            this.btnUkloni.Size = new System.Drawing.Size(117, 25);
+            this.btnUkloni.TabIndex = 15;
+            this.btnUkloni.Text = "Ukloni";
+            this.btnUkloni.UseVisualStyleBackColor = true;
+            this.btnUkloni.Click += new System.EventHandler(this.btnUkloni_Click);
+            // 
+            // txtKontakt
+            // 
+            this.txtKontakt.Location = new System.Drawing.Point(368, 21);
+            this.txtKontakt.Multiline = true;
+            this.txtKontakt.Name = "txtKontakt";
+            this.txtKontakt.Size = new System.Drawing.Size(219, 43);
+            this.txtKontakt.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(300, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 26);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Kontakt\r\ndobavljača";
+            // 
             // DodajNarudzbenicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 353);
+            this.ClientSize = new System.Drawing.Size(599, 353);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtKontakt);
             this.Controls.Add(this.btnUkloni);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.lstNarudzba);
@@ -233,5 +254,7 @@
         private System.Windows.Forms.ColumnHeader ID_;
         private System.Windows.Forms.ColumnHeader Naziv_;
         private System.Windows.Forms.ColumnHeader Kolicina;
+        public System.Windows.Forms.TextBox txtKontakt;
+        private System.Windows.Forms.Label label1;
     }
 }

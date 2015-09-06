@@ -38,9 +38,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(47, 178);
+            this.btnUnos.Location = new System.Drawing.Point(28, 203);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(167, 178);
+            this.btnOdustani.Location = new System.Drawing.Point(148, 203);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 1;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(44, 39);
+            this.lblID.Location = new System.Drawing.Point(25, 46);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -68,7 +68,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(44, 92);
+            this.lblNaziv.Location = new System.Drawing.Point(25, 86);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(34, 13);
             this.lblNaziv.TabIndex = 3;
@@ -76,20 +76,21 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(142, 39);
+            this.txtID.Location = new System.Drawing.Point(65, 46);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(191, 20);
             this.txtID.TabIndex = 4;
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(142, 92);
+            this.txtNaziv.Location = new System.Drawing.Point(65, 86);
+            this.txtNaziv.Multiline = true;
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(100, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(191, 73);
             this.txtNaziv.TabIndex = 5;
             // 
-            // DdodajProizvodaca
+            // DodajProizvodaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +101,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
-            this.Name = "DdodajProizvodaca";
+            this.Name = "DodajProizvodaca";
             this.Text = "DdodajProizvodaca";
             this.ResumeLayout(false);
             this.PerformLayout();

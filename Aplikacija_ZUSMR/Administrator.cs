@@ -29,6 +29,17 @@ namespace Aplikacija_ZUSMR
             tip_zaposlenja.Show();
         }
 
+        private void grafToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProdajaProizvodaGraf ppg = new ProdajaProizvodaGraf();
+            ppg.Show();
+        }
+
+        private void Administrator_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

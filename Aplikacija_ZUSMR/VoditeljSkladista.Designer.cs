@@ -40,38 +40,43 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.strojeviIOpremaToolStripMenuItem,
             this.skladišteToolStripMenuItem,
             this.proizvodiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(284, 262);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // strojeviIOpremaToolStripMenuItem
             // 
+            this.strojeviIOpremaToolStripMenuItem.AutoSize = false;
             this.strojeviIOpremaToolStripMenuItem.Name = "strojeviIOpremaToolStripMenuItem";
-            this.strojeviIOpremaToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.strojeviIOpremaToolStripMenuItem.Size = new System.Drawing.Size(108, 258);
             this.strojeviIOpremaToolStripMenuItem.Text = "Strojevi i oprema";
             this.strojeviIOpremaToolStripMenuItem.Click += new System.EventHandler(this.strojeviIOpremaToolStripMenuItem_Click);
             // 
             // skladišteToolStripMenuItem
             // 
+            this.skladišteToolStripMenuItem.AutoSize = false;
             this.skladišteToolStripMenuItem.Name = "skladišteToolStripMenuItem";
-            this.skladišteToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.skladišteToolStripMenuItem.Size = new System.Drawing.Size(88, 258);
             this.skladišteToolStripMenuItem.Text = "Skladište";
             this.skladišteToolStripMenuItem.Click += new System.EventHandler(this.skladišteToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
+            this.proizvodiToolStripMenuItem.AutoSize = false;
             this.proizvodiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tipProizvodaToolStripMenuItem,
             this.pretragaProizvodaToolStripMenuItem,
             this.prikazStanjaToolStripMenuItem});
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(73, 258);
             this.proizvodiToolStripMenuItem.Text = "Proizvodi";
             // 
             // tipProizvodaToolStripMenuItem
@@ -86,12 +91,14 @@
             this.pretragaProizvodaToolStripMenuItem.Name = "pretragaProizvodaToolStripMenuItem";
             this.pretragaProizvodaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.pretragaProizvodaToolStripMenuItem.Text = "Pretraga proizvoda";
+            this.pretragaProizvodaToolStripMenuItem.Click += new System.EventHandler(this.pretragaProizvodaToolStripMenuItem_Click);
             // 
             // prikazStanjaToolStripMenuItem
             // 
             this.prikazStanjaToolStripMenuItem.Name = "prikazStanjaToolStripMenuItem";
             this.prikazStanjaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.prikazStanjaToolStripMenuItem.Text = "Prikaz stanja";
+            this.prikazStanjaToolStripMenuItem.Click += new System.EventHandler(this.prikazStanjaToolStripMenuItem_Click);
             // 
             // VoditeljSkladista
             // 
@@ -105,7 +112,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

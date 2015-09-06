@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 47);
+            this.label1.Location = new System.Drawing.Point(28, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 102);
+            this.label2.Location = new System.Drawing.Point(24, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 1;
@@ -56,9 +56,9 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(41, 184);
+            this.btnUnos.Location = new System.Drawing.Point(62, 184);
             this.btnUnos.Name = "btnUnos";
-            this.btnUnos.Size = new System.Drawing.Size(75, 23);
+            this.btnUnos.Size = new System.Drawing.Size(84, 33);
             this.btnUnos.TabIndex = 2;
             this.btnUnos.Text = "Unos";
             this.btnUnos.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(145, 184);
+            this.btnOdustani.Location = new System.Drawing.Point(163, 184);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(75, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(84, 33);
             this.btnOdustani.TabIndex = 3;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
@@ -76,17 +76,18 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(96, 47);
+            this.txtID.Location = new System.Drawing.Point(62, 66);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(184, 20);
             this.txtID.TabIndex = 4;
             // 
             // txtOpis
             // 
-            this.txtOpis.Location = new System.Drawing.Point(96, 95);
+            this.txtOpis.Location = new System.Drawing.Point(62, 113);
+            this.txtOpis.Multiline = true;
             this.txtOpis.Name = "txtOpis";
-            this.txtOpis.Size = new System.Drawing.Size(100, 20);
+            this.txtOpis.Size = new System.Drawing.Size(185, 50);
             this.txtOpis.TabIndex = 5;
             // 
             // Dodaj_Tip_Zaposlenja

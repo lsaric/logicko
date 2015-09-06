@@ -36,26 +36,27 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kupacToolStripMenuItem,
             this.računiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(284, 262);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kupacToolStripMenuItem
             // 
             this.kupacToolStripMenuItem.Name = "kupacToolStripMenuItem";
-            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(52, 258);
             this.kupacToolStripMenuItem.Text = "Kupac";
             this.kupacToolStripMenuItem.Click += new System.EventHandler(this.kupacToolStripMenuItem_Click);
             // 
             // računiToolStripMenuItem
             // 
             this.računiToolStripMenuItem.Name = "računiToolStripMenuItem";
-            this.računiToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.računiToolStripMenuItem.Size = new System.Drawing.Size(55, 258);
             this.računiToolStripMenuItem.Text = "Računi";
             this.računiToolStripMenuItem.Click += new System.EventHandler(this.računiToolStripMenuItem_Click);
             // 
