@@ -91,7 +91,7 @@
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(78, 13);
             this.lblNaziv.TabIndex = 5;
-            this.lblNaziv.Text = "Naziv skladista";
+            this.lblNaziv.Text = "Naziv skladišta";
             // 
             // txtTip
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.cmbNaziv);
             this.Name = "DodajStrojOpremu";
-            this.Text = "DodajStrojOpremu";
+            this.Text = "Dodaj stroj ili opremu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,7 +14,7 @@ namespace Aplikacija_ZUSMR
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string Kontakt { get; set; }
-        //lipo ti makni uredi i eto ga rjesen problem. bogati. a s
+        
         public static List<Narudzbenica> selectUpit(string upit)
         {
             List<Narudzbenica> narudzbenica = new List<Narudzbenica>();
@@ -26,8 +26,6 @@ namespace Aplikacija_ZUSMR
                 db.Datum = dr["Datum"].ToString();
                 db.Ime = dr["Ime Prezime"].ToString();
                 db.Kontakt = dr["Kontakt"].ToString();
-                //db.Prezime = dr["Prezime"].ToString();
-                //triba mi i ime i prezime od istog lika u cmb, da ne stavljan ime od jednog a prezime od drugog
                 narudzbenica.Add(db);
             }
             dr.Close();

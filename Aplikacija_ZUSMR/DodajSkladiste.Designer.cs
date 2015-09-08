@@ -122,7 +122,7 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajSkladiste";
-            this.Text = "DodajSkladiste";
+            this.Text = "Dodaj skladište";
             this.ResumeLayout(false);
             this.PerformLayout();
 

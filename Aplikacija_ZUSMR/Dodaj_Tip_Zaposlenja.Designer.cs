@@ -102,7 +102,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Dodaj_Tip_Zaposlenja";
-            this.Text = "Dodaj_Tip_Zaposlenja";
+            this.Text = "Dodaj tip zaposlenja";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,7 @@ namespace Aplikacija_ZUSMR
     public partial class DodajKupca : Form
     {
         private int U;
+        nmbOd dodajkupca = null;
         public DodajKupca(int U)
         {
             this.U = U;
@@ -33,6 +34,11 @@ namespace Aplikacija_ZUSMR
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }
+            if (dodajkupca == null || dodajkupca.IsDisposed)
+            {
+                dodajkupca = new nmbOd();
+            }
+            dodajkupca.Show();
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)

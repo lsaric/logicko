@@ -75,7 +75,7 @@
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.graf);
             this.Name = "ProdajaProizvodaGraf";
-            this.Text = "ProdajaProizvodaGraf";
+            this.Text = "Graf prodaje proizvoda";
             this.Load += new System.EventHandler(this.ProdajaProizvodaGraf_Load);
             this.ResumeLayout(false);
 

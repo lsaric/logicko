@@ -58,7 +58,9 @@
             this.Naziv,
             this.Kolicina,
             this.Cijena});
+            this.lstProizvodi.FullRowSelect = true;
             this.lstProizvodi.Location = new System.Drawing.Point(304, 33);
+            this.lstProizvodi.MultiSelect = false;
             this.lstProizvodi.Name = "lstProizvodi";
             this.lstProizvodi.Size = new System.Drawing.Size(375, 107);
             this.lstProizvodi.TabIndex = 0;
@@ -77,7 +79,7 @@
             // 
             // Kolicina
             // 
-            this.Kolicina.Text = "Kolicina";
+            this.Kolicina.Text = "Količina";
             this.Kolicina.Width = 81;
             // 
             // Cijena
@@ -92,7 +94,9 @@
             this.Naziv_,
             this.Kolicina_,
             this.Iznos});
+            this.lstRacun.FullRowSelect = true;
             this.lstRacun.Location = new System.Drawing.Point(304, 213);
+            this.lstRacun.MultiSelect = false;
             this.lstRacun.Name = "lstRacun";
             this.lstRacun.Size = new System.Drawing.Size(375, 112);
             this.lstRacun.TabIndex = 1;
@@ -111,7 +115,7 @@
             // 
             // Kolicina_
             // 
-            this.Kolicina_.Text = "Kolicina";
+            this.Kolicina_.Text = "Količina";
             this.Kolicina_.Width = 75;
             // 
             // Iznos
@@ -195,7 +199,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Kolicina";
+            this.label2.Text = "Količina";
             // 
             // label3
             // 
@@ -231,7 +235,8 @@
             this.Controls.Add(this.lstRacun);
             this.Controls.Add(this.lstProizvodi);
             this.Name = "KreirajRacun";
-            this.Text = "KreirajRacun";
+            this.Text = "Kreiraj račun";
+            this.Load += new System.EventHandler(this.KreirajRacun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmKolicina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

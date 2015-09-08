@@ -34,8 +34,6 @@
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUnos = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +46,16 @@
             this.Kontakt,
             this.Naziv});
             this.dgvKupci.Location = new System.Drawing.Point(0, -1);
+            this.dgvKupci.MultiSelect = false;
             this.dgvKupci.Name = "dgvKupci";
             this.dgvKupci.ReadOnly = true;
+            this.dgvKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKupci.Size = new System.Drawing.Size(345, 175);
             this.dgvKupci.TabIndex = 0;
             // 
             // ID_kupca
             // 
-            this.ID_kupca.HeaderText = "ID";
+            this.ID_kupca.HeaderText = "Šifra kupca";
             this.ID_kupca.Name = "ID_kupca";
             this.ID_kupca.ReadOnly = true;
             // 
@@ -91,38 +91,17 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(194, 180);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obrisi";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(47, 219);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
             // KupciPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 262);
-            this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvKupci);
             this.Name = "KupciPrikaz";
-            this.Text = "KupciPrikaz";
+            this.Text = "Prikaz kupaca";
+            this.Load += new System.EventHandler(this.KupciPrikaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).EndInit();
             this.ResumeLayout(false);
 
@@ -131,12 +110,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvKupci;
+        private System.Windows.Forms.Button btnUnos;
+        private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_kupca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kontakt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
-        private System.Windows.Forms.Button btnUnos;
-        private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.Button btnOsvjezi;
     }
 }

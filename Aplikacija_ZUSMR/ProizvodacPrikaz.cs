@@ -12,6 +12,8 @@ namespace Aplikacija_ZUSMR
 {
     public partial class ProizvodacPrikaz : Form
     {
+        DodajProizvodaca dPro = null;
+        DodajProizvodaca dPro1 = null;//ja san svugdi samo cp ono sta si reka, nisan vako nista gleda i minja ka i ti
         public ProizvodacPrikaz()
         {
             InitializeComponent();
@@ -38,21 +40,35 @@ namespace Aplikacija_ZUSMR
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            DodajProizvodaca dodajPro = new DodajProizvodaca(1);
-            dodajPro.Show();
+            if (dPro == null || dPro.IsDisposed)
+            { 
+                dPro.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
+            }
+            
+            dPro.Show();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
         {
             if (dgvProizvodac.SelectedRows.Count == 1)
             {
-                DodajProizvodaca UrediProizvodaca = new DodajProizvodaca(2);
+                if (dPro1 == null || dPro1.IsDisposed)
+                {
+                    dPro1 = new DodajProizvodaca(2);
+                }
+                dPro1.txtID.Text = dgvProizvodac.SelectedRows[0].Cells[0].Value.ToString();
+                dPro1.txtNaziv.Text = dgvProizvodac.SelectedRows[0].Cells[1].Value.ToString();
 
-                UrediProizvodaca.txtID.Text = dgvProizvodac.SelectedRows[0].Cells[0].Value.ToString();
-                UrediProizvodaca.txtNaziv.Text = dgvProizvodac.SelectedRows[0].Cells[1].Value.ToString();
-                UrediProizvodaca.Show();
+                dPro1.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
+
+                dPro1.Show();
             }
         }
+
+        void dPro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
+        }//i
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {

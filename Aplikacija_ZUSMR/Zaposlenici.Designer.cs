@@ -38,8 +38,6 @@
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,14 +54,16 @@
             this.Opis,
             this.Naziv});
             this.dgvZaposlenici.Location = new System.Drawing.Point(12, 12);
+            this.dgvZaposlenici.MultiSelect = false;
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.ReadOnly = true;
+            this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenici.Size = new System.Drawing.Size(744, 179);
             this.dgvZaposlenici.TabIndex = 0;
             // 
             // ID
             // 
-            this.ID.HeaderText = "ID";
+            this.ID.HeaderText = "Šifra";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
@@ -81,7 +81,7 @@
             // 
             // KorisnickoIme
             // 
-            this.KorisnickoIme.HeaderText = "Korisnicko ime";
+            this.KorisnickoIme.HeaderText = "Korisničko ime";
             this.KorisnickoIme.Name = "KorisnickoIme";
             this.KorisnickoIme.ReadOnly = true;
             // 
@@ -123,38 +123,16 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(177, 251);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(38, 253);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
             // Zaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 297);
-            this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.dgvZaposlenici);
             this.Name = "Zaposlenici";
-            this.Text = "Zaposlenici";
+            this.Text = "Prikaz zaposlenika";
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             this.ResumeLayout(false);
 
@@ -163,6 +141,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvZaposlenici;
+        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnUredi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
@@ -170,9 +150,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Lozinka;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
-        private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.Button btnOsvjezi;
     }
 }

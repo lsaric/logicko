@@ -39,6 +39,8 @@ namespace Aplikacija_ZUSMR
 
         }
 
+
+
         private void btnOsvjezi_Click(object sender, EventArgs e)
         {
             dgvRefresh();
@@ -47,6 +49,7 @@ namespace Aplikacija_ZUSMR
         private void btnUnos_Click(object sender, EventArgs e)
         {
             DodajStrojOpremu stroj = new DodajStrojOpremu(1);
+            stroj.FormClosed += new FormClosedEventHandler(stroj_FormClosed);
             stroj.Show();
         }
 
@@ -54,13 +57,19 @@ namespace Aplikacija_ZUSMR
         {
             if (dgvStrojevi.SelectedRows.Count == 1)
             {
-                DodajStrojOpremu urediStrojOpremu = new DodajStrojOpremu(2);
+                DodajStrojOpremu stroj = new DodajStrojOpremu(2);
 
-                urediStrojOpremu.txtID.Text = dgvStrojevi.SelectedRows[0].Cells[0].Value.ToString();
-                urediStrojOpremu.txtTip.Text = dgvStrojevi.SelectedRows[0].Cells[1].Value.ToString();
+                stroj.txtID.Text = dgvStrojevi.SelectedRows[0].Cells[0].Value.ToString();
+                stroj.txtTip.Text = dgvStrojevi.SelectedRows[0].Cells[1].Value.ToString();
 
-                urediStrojOpremu.Show();
+                stroj.FormClosed += new FormClosedEventHandler(stroj_FormClosed);
+                stroj.Show();
             }
+        }
+
+        void stroj_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)

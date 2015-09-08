@@ -228,7 +228,7 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajNarudzbenicu";
-            this.Text = "DodajNarudzbenicu";
+            this.Text = "Dodaj narudžbenicu";
             ((System.ComponentModel.ISupportInitialize)(this.nmKolicina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

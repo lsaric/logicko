@@ -12,39 +12,60 @@ namespace Aplikacija_ZUSMR
 {
     public partial class VoditeljSkladista : Form
     {
+        SkladistaPrikaz skladista = null;
+        Strojevi_i_Oprema_Prikaz strojevi = null;
+        TipProizvodaPrikaz TipProizvodaPr = null;
+        nmbOd pr = null;
         public VoditeljSkladista()
         {
             InitializeComponent();
+            this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči voditelja skladišta!";
         }
 
         private void skladišteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SkladistaPrikaz skladista = new SkladistaPrikaz();
+            if (skladista == null || skladista.IsDisposed)
+            {
+                skladista = new SkladistaPrikaz();
+            }
+            
             skladista.Show();
         }
 
         private void strojeviIOpremaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Strojevi_i_Oprema_Prikaz strojevi = new Strojevi_i_Oprema_Prikaz();
+            if (strojevi == null || strojevi.IsDisposed)
+            {
+                strojevi = new Strojevi_i_Oprema_Prikaz();
+            }
             strojevi.Show();
         }
 
         private void tipProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TipProizvodaPrikaz TipProizvodaPr = new TipProizvodaPrikaz();
-            TipProizvodaPr.Show();
+
         }
 
         private void pretragaProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nmbOd pr = new nmbOd();
+            if (pr == null || pr.IsDisposed)
+            {
+                pr = new nmbOd();
+            }
             pr.Show();
         }
 
         private void prikazStanjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProdajaProizvodaGraf ppg = new ProdajaProizvodaGraf();
-            ppg.Show();
+            ppg.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }

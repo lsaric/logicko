@@ -34,8 +34,6 @@
             this.Kapacitet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUnos = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkladista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +46,16 @@
             this.Naziv,
             this.Kapacitet});
             this.dgvSkladista.Location = new System.Drawing.Point(-1, -1);
+            this.dgvSkladista.MultiSelect = false;
             this.dgvSkladista.Name = "dgvSkladista";
             this.dgvSkladista.ReadOnly = true;
+            this.dgvSkladista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSkladista.Size = new System.Drawing.Size(343, 150);
             this.dgvSkladista.TabIndex = 0;
             // 
             // ID_skaldista
             // 
-            this.ID_skaldista.HeaderText = "ID skladista";
+            this.ID_skaldista.HeaderText = "Šifra skladišta";
             this.ID_skaldista.Name = "ID_skaldista";
             this.ID_skaldista.ReadOnly = true;
             // 
@@ -91,38 +91,16 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(183, 212);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obrisi";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(50, 212);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
             // SkladistaPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 262);
-            this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvSkladista);
             this.Name = "SkladistaPrikaz";
-            this.Text = "SkladistaPrikaz";
+            this.Text = "Prikaz skladišta";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkladista)).EndInit();
             this.ResumeLayout(false);
 
@@ -133,8 +111,6 @@
         private System.Windows.Forms.DataGridView dgvSkladista;
         private System.Windows.Forms.Button btnUnos;
         private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_skaldista;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kapacitet;

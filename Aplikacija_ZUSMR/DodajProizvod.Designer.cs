@@ -153,16 +153,16 @@
             this.lblKolicina.Name = "lblKolicina";
             this.lblKolicina.Size = new System.Drawing.Size(44, 13);
             this.lblKolicina.TabIndex = 12;
-            this.lblKolicina.Text = "Kolicina";
+            this.lblKolicina.Text = "Količina";
             // 
             // lblNazivProizvodaca
             // 
             this.lblNazivProizvodaca.AutoSize = true;
             this.lblNazivProizvodaca.Location = new System.Drawing.Point(12, 182);
             this.lblNazivProizvodaca.Name = "lblNazivProizvodaca";
-            this.lblNazivProizvodaca.Size = new System.Drawing.Size(60, 13);
+            this.lblNazivProizvodaca.Size = new System.Drawing.Size(61, 13);
             this.lblNazivProizvodaca.TabIndex = 13;
-            this.lblNazivProizvodaca.Text = "Proizvodac";
+            this.lblNazivProizvodaca.Text = "Proizvođač";
             // 
             // lblTip
             // 
@@ -180,7 +180,7 @@
             this.lblSkladiste.Name = "lblSkladiste";
             this.lblSkladiste.Size = new System.Drawing.Size(50, 13);
             this.lblSkladiste.TabIndex = 15;
-            this.lblSkladiste.Text = "Skladiste";
+            this.lblSkladiste.Text = "Skladište";
             // 
             // DodajProizvod
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajProizvod";
-            this.Text = "DodajProizvod";
+            this.Text = "Dodaj proizvod";
             this.ResumeLayout(false);
             this.PerformLayout();
 

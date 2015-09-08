@@ -49,16 +49,6 @@ namespace Aplikacija_ZUSMR
 
                 UrediNarudzbenicu.txtID.Text = dgvNarudzbenica.SelectedRows[0].Cells[0].Value.ToString();
                 UrediNarudzbenicu.txtKontakt.Text = dgvNarudzbenica.SelectedRows[0].Cells[1].Value.ToString();
-                //UrediNarudzbenicu.dateTimePicker1.Value = dgvNarudzbenica.SelectedRows[0].Cells[1].Value;
-                /*
-                DateTime myDate = DateTime.ParseExact(dgvNarudzbenica.SelectedRows[0].Cells[1].Value.ToString(), "yyyy-MM-dd hh:mm:ss.mmm",
-                                       System.Globalization.CultureInfo.InvariantCulture);
-
-                UrediNarudzbenicu.dateTimePicker1.Value = DateTime.ParseExact(
-    myDate.ToString(),
-    "yyyy-MM-dd hh:mm:ss.mmm",
-    CultureInfo.InvariantCulture);
-                */ 
                 UrediNarudzbenicu.Show();
             }
         }
@@ -67,9 +57,20 @@ namespace Aplikacija_ZUSMR
         {
             DodajNarudzbenicu DodajNar = new DodajNarudzbenicu(1);
             DodajNar.Show();
+            
         }
 
         private void btnOsvjezi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void NarudzbenicaPrikaz_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOsvjezi_Click_1(object sender, EventArgs e)
         {
             dgvRefresh();
         }

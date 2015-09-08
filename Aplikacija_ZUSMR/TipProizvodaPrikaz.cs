@@ -40,6 +40,7 @@ namespace Aplikacija_ZUSMR
         private void btnUnos_Click(object sender, EventArgs e)
         {
             DodajTipProizvoda DodajTipPr = new DodajTipProizvoda(1);
+            DodajTipPr.FormClosed += new FormClosedEventHandler(DodajTipPr_FormClosed);
             DodajTipPr.Show();
         }
 
@@ -47,13 +48,19 @@ namespace Aplikacija_ZUSMR
         {
             if (dgvTipProizvoda.SelectedRows.Count == 1)
             {
-                DodajTipProizvoda UrediTipProizvoda = new DodajTipProizvoda(2);
+                DodajTipProizvoda DodajTipPr = new DodajTipProizvoda(2);
 
-                UrediTipProizvoda.txtID.Text = dgvTipProizvoda.SelectedRows[0].Cells[0].Value.ToString();
-                UrediTipProizvoda.txtTip.Text = dgvTipProizvoda.SelectedRows[0].Cells[1].Value.ToString();
+                DodajTipPr.txtID.Text = dgvTipProizvoda.SelectedRows[0].Cells[0].Value.ToString();
+                DodajTipPr.txtTip.Text = dgvTipProizvoda.SelectedRows[0].Cells[1].Value.ToString();
 
-                UrediTipProizvoda.Show();
+                DodajTipPr.FormClosed += new FormClosedEventHandler(DodajTipPr_FormClosed);
+                DodajTipPr.Show();
             }
+        }
+
+        void DodajTipPr_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)

@@ -69,13 +69,16 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(170, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(102, 115);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(170, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // Login
             // 
@@ -88,7 +91,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Prijava";
+            this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

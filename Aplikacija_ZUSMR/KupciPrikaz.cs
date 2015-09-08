@@ -16,6 +16,7 @@ namespace Aplikacija_ZUSMR
         {
             InitializeComponent();
             dgvRefresh();
+            
         }
 
         private void dgvRefresh()
@@ -40,21 +41,29 @@ namespace Aplikacija_ZUSMR
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            DodajKupca DodajKu = new DodajKupca(1);
-            DodajKu.Show();
+            DodajKupca dKu = new DodajKupca(1);
+            dKu.FormClosed += new FormClosedEventHandler(dKu_FormClosed);
+            dKu.Show();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
         {
             if (dgvKupci.SelectedRows.Count == 1)
             {
-                DodajKupca UrediKupca = new DodajKupca(2);
+                DodajKupca dKu = new DodajKupca(2);
 
-                UrediKupca.txtID.Text = dgvKupci.SelectedRows[0].Cells[0].Value.ToString();
-                UrediKupca.txtKontakt.Text = dgvKupci.SelectedRows[0].Cells[1].Value.ToString();
-                UrediKupca.txtNaziv.Text = dgvKupci.SelectedRows[0].Cells[2].Value.ToString();
-                UrediKupca.Show();
+                dKu.txtID.Text = dgvKupci.SelectedRows[0].Cells[0].Value.ToString();
+                dKu.txtKontakt.Text = dgvKupci.SelectedRows[0].Cells[1].Value.ToString();
+                dKu.txtNaziv.Text = dgvKupci.SelectedRows[0].Cells[2].Value.ToString();
+
+                dKu.FormClosed += new FormClosedEventHandler(dKu_FormClosed);
+                dKu.Show();
             }
+        }
+
+        void dKu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)
@@ -74,6 +83,11 @@ namespace Aplikacija_ZUSMR
         private void btnOsvjezi_Click(object sender, EventArgs e)
         {
             dgvRefresh();
+        }
+
+        private void KupciPrikaz_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -68,23 +68,30 @@ namespace Aplikacija_ZUSMR
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            DodajProizvod dodajProizvod = new DodajProizvod(1);
-            dodajProizvod.Show();
+            DodajProizvod dProizvod = new DodajProizvod(1);
+            dProizvod.FormClosed += new FormClosedEventHandler(dProizvod_FormClosed);
+            dProizvod.Show();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
         {
             if (dgvProizvodi.SelectedRows.Count == 1)
             {
-                DodajProizvod urediProizvod = new DodajProizvod(2);
+                DodajProizvod dProizvod = new DodajProizvod(2);
 
-                urediProizvod.txtID.Text = dgvProizvodi.SelectedRows[0].Cells[0].Value.ToString();
-                urediProizvod.txtNaziv.Text = dgvProizvodi.SelectedRows[0].Cells[1].Value.ToString();
-                urediProizvod.txtCijena.Text = dgvProizvodi.SelectedRows[0].Cells[2].Value.ToString();
-                urediProizvod.txtKolicina.Text = dgvProizvodi.SelectedRows[0].Cells[3].Value.ToString();
+                dProizvod.txtID.Text = dgvProizvodi.SelectedRows[0].Cells[0].Value.ToString();
+                dProizvod.txtNaziv.Text = dgvProizvodi.SelectedRows[0].Cells[1].Value.ToString();
+                dProizvod.txtCijena.Text = dgvProizvodi.SelectedRows[0].Cells[2].Value.ToString();
+                dProizvod.txtKolicina.Text = dgvProizvodi.SelectedRows[0].Cells[3].Value.ToString();
 
-                urediProizvod.Show();
+                dProizvod.FormClosed += new FormClosedEventHandler(dProizvod_FormClosed);
+                dProizvod.Show();
             }
+        }
+
+        void dProizvod_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)

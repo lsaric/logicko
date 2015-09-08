@@ -152,7 +152,7 @@
             this.lblKorisnicko.Name = "lblKorisnicko";
             this.lblKorisnicko.Size = new System.Drawing.Size(75, 13);
             this.lblKorisnicko.TabIndex = 12;
-            this.lblKorisnicko.Text = "Korisnicko ime";
+            this.lblKorisnicko.Text = "Korisničko ime";
             // 
             // lblLozinka
             // 
@@ -179,7 +179,7 @@
             this.lblSkladiste.Name = "lblSkladiste";
             this.lblSkladiste.Size = new System.Drawing.Size(78, 13);
             this.lblSkladiste.TabIndex = 15;
-            this.lblSkladiste.Text = "Naziv skladista";
+            this.lblSkladiste.Text = "Naziv skladišta";
             // 
             // DodajZaposlenika
             // 
@@ -203,7 +203,7 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.txtID);
             this.Name = "DodajZaposlenika";
-            this.Text = "DodajZaposlenika";
+            this.Text = "Dodaj zaposlenika";
             this.ResumeLayout(false);
             this.PerformLayout();
 

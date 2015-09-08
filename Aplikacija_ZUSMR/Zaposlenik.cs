@@ -39,12 +39,9 @@ namespace Aplikacija_ZUSMR
                 db.Prezime = dr["Prezime"].ToString();
                 db.KorisnickoIme = dr["KorisnickoIme"].ToString();
                 db.Lozinka = dr["Lozinka"].ToString();
-                //jasno zato jer ode imamo opis i naziv a u select * nema toga,hmmm
-                ////sec znan kako to izbjec samo malo ja mislin
                 if (vrsta == 2)
                 {
                     db.Opis = (dr["Opis"].ToString());
-                    //da vidin upit
                     db.Naziv = (dr["Naziv"].ToString());
                 }
                 

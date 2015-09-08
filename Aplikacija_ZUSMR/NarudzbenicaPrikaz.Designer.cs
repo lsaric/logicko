@@ -49,14 +49,16 @@
             this.Datum,
             this.ImePrezime});
             this.dgvNarudzbenica.Location = new System.Drawing.Point(0, 0);
+            this.dgvNarudzbenica.MultiSelect = false;
             this.dgvNarudzbenica.Name = "dgvNarudzbenica";
             this.dgvNarudzbenica.ReadOnly = true;
+            this.dgvNarudzbenica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNarudzbenica.Size = new System.Drawing.Size(445, 188);
             this.dgvNarudzbenica.TabIndex = 0;
             // 
             // ID_narudzbenica
             // 
-            this.ID_narudzbenica.HeaderText = "ID_narudzbenica";
+            this.ID_narudzbenica.HeaderText = "Šifra narudžbenice";
             this.ID_narudzbenica.Name = "ID_narudzbenica";
             this.ID_narudzbenica.ReadOnly = true;
             // 
@@ -100,13 +102,13 @@
             // 
             // btnOsvjezi
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(325, 208);
+            this.btnOsvjezi.Location = new System.Drawing.Point(326, 208);
             this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
+            this.btnOsvjezi.Size = new System.Drawing.Size(107, 33);
             this.btnOsvjezi.TabIndex = 3;
-            this.btnOsvjezi.Text = "Osvjezi";
+            this.btnOsvjezi.Text = "Osvježi";
             this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click_1);
             // 
             // NarudzbenicaPrikaz
             // 
@@ -118,7 +120,8 @@
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvNarudzbenica);
             this.Name = "NarudzbenicaPrikaz";
-            this.Text = "NarudzbenicaPrikaz";
+            this.Text = "Prikaz narudžbenice";
+            this.Load += new System.EventHandler(this.NarudzbenicaPrikaz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenica)).EndInit();
             this.ResumeLayout(false);
 
@@ -129,10 +132,10 @@
         private System.Windows.Forms.DataGridView dgvNarudzbenica;
         private System.Windows.Forms.Button btnUnos;
         private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_narudzbenica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kontakt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImePrezime;
+        private System.Windows.Forms.Button btnOsvjezi;
     }
 }

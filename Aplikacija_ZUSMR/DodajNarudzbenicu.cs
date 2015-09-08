@@ -15,6 +15,7 @@ namespace Aplikacija_ZUSMR
     {
         private int U;
         private List<Zaposlenik> zaposlenici;
+        nmbOd dodajnarudzbenicu = null;
         
         public DodajNarudzbenicu(int U)
         {
@@ -77,6 +78,11 @@ namespace Aplikacija_ZUSMR
                Baza.Instance.IzvrsavanjeUpita(upit);
                this.Close();
            }
+           if (dodajnarudzbenicu == null || dodajnarudzbenicu.IsDisposed)
+           {
+               dodajnarudzbenicu = new nmbOd();
+           }
+           dodajnarudzbenicu.Show();
 
         }
 

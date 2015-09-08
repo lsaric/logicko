@@ -14,7 +14,7 @@ namespace Aplikacija_ZUSMR
     {
 
         private int U;
-
+        nmbOd dodajtipzaposlenja = null;
         public Dodaj_Tip_Zaposlenja(int U)
         {
             this.U = U;
@@ -36,6 +36,11 @@ namespace Aplikacija_ZUSMR
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }
+            if (dodajtipzaposlenja == null || dodajtipzaposlenja.IsDisposed)
+            {
+                dodajtipzaposlenja = new nmbOd();
+            }
+            dodajtipzaposlenja.Show();
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)

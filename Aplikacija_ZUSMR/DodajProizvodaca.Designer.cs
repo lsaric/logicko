@@ -102,7 +102,7 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajProizvodaca";
-            this.Text = "DdodajProizvodaca";
+            this.Text = "Ddodaj proizvođača";
             this.ResumeLayout(false);
             this.PerformLayout();
 

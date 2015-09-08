@@ -46,6 +46,7 @@ namespace Aplikacija_ZUSMR
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             DodajZaposlenika dodaj = new DodajZaposlenika(1);
+            dodaj.FormClosed += new FormClosedEventHandler(dodaj_FormClosed);
             dodaj.Show();
         }
 
@@ -58,16 +59,22 @@ namespace Aplikacija_ZUSMR
         {
             if (dgvZaposlenici.SelectedRows.Count == 1)
             {
-                DodajZaposlenika urediZaposlenika = new DodajZaposlenika(2);
+                DodajZaposlenika dodaj = new DodajZaposlenika(2);
 
-                urediZaposlenika.txtID.Text = dgvZaposlenici.SelectedRows[0].Cells[0].Value.ToString();
-                urediZaposlenika.txtIme.Text = dgvZaposlenici.SelectedRows[0].Cells[1].Value.ToString();
-                urediZaposlenika.txtPrezime.Text = dgvZaposlenici.SelectedRows[0].Cells[2].Value.ToString();
-                urediZaposlenika.txtKorisnicko.Text = dgvZaposlenici.SelectedRows[0].Cells[3].Value.ToString();
-                urediZaposlenika.txtLozinka.Text = dgvZaposlenici.SelectedRows[0].Cells[4].Value.ToString();
+                dodaj.txtID.Text = dgvZaposlenici.SelectedRows[0].Cells[0].Value.ToString();
+                dodaj.txtIme.Text = dgvZaposlenici.SelectedRows[0].Cells[1].Value.ToString();
+                dodaj.txtPrezime.Text = dgvZaposlenici.SelectedRows[0].Cells[2].Value.ToString();
+                dodaj.txtKorisnicko.Text = dgvZaposlenici.SelectedRows[0].Cells[3].Value.ToString();
+                dodaj.txtLozinka.Text = dgvZaposlenici.SelectedRows[0].Cells[4].Value.ToString();
 
-                urediZaposlenika.Show();
+                dodaj.FormClosed += new FormClosedEventHandler(dodaj_FormClosed);
+                dodaj.Show();
             }
+        }
+
+        void dodaj_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
         }
 
         private void btnObrisi_Click(object sender, EventArgs e)

@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.dgvProizvodac = new System.Windows.Forms.DataGridView();
-            this.btnUnos = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             this.ID_proizvodac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUnos = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodac)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,10 +44,25 @@
             this.ID_proizvodac,
             this.Naziv});
             this.dgvProizvodac.Location = new System.Drawing.Point(1, 0);
+            this.dgvProizvodac.MultiSelect = false;
             this.dgvProizvodac.Name = "dgvProizvodac";
             this.dgvProizvodac.ReadOnly = true;
+            this.dgvProizvodac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProizvodac.Size = new System.Drawing.Size(281, 150);
             this.dgvProizvodac.TabIndex = 0;
+            // 
+            // ID_proizvodac
+            // 
+            this.ID_proizvodac.HeaderText = "Šifra proizvođača";
+            this.ID_proizvodac.Name = "ID_proizvodac";
+            this.ID_proizvodac.ReadOnly = true;
+            // 
+            // Naziv
+            // 
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 130;
             // 
             // btnUnos
             // 
@@ -71,51 +84,16 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(151, 170);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(108, 33);
-            this.btnObrisi.TabIndex = 3;
-            this.btnObrisi.Text = "Obrisi";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(21, 217);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
-            // 
-            // ID_proizvodac
-            // 
-            this.ID_proizvodac.HeaderText = "ID";
-            this.ID_proizvodac.Name = "ID_proizvodac";
-            this.ID_proizvodac.ReadOnly = true;
-            // 
-            // Naziv
-            // 
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            this.Naziv.Width = 130;
-            // 
             // ProizvodacPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvProizvodac);
             this.Name = "ProizvodacPrikaz";
-            this.Text = "ProizvodacPrikaz";
+            this.Text = "Prikaz proizvođača";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodac)).EndInit();
             this.ResumeLayout(false);
 
@@ -126,8 +104,6 @@
         private System.Windows.Forms.DataGridView dgvProizvodac;
         private System.Windows.Forms.Button btnUnos;
         private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_proizvodac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
     }

@@ -67,11 +67,10 @@ namespace Aplikacija_ZUSMR
                     }
                     else
                     {
-                        //lstProizvodi.SelectedItems[0].Remove();
 
                         ListViewItem listitem = new ListViewItem(ID);
                         listitem.SubItems.Add(naziv);
-                        listitem.SubItems.Add(nmKolicina.Value.ToString()); //string kolicina u listi
+                        listitem.SubItems.Add(nmKolicina.Value.ToString()); 
                         listitem.SubItems.Add((nmKolicina.Value * cijena).ToString());
                         lstRacun.Items.Add(listitem);
                         nmKolicina.Value = 0;
@@ -92,9 +91,6 @@ namespace Aplikacija_ZUSMR
             else
             {
 
-                //ListViewItem listitem = new ListViewItem(lstRacun.SelectedItems[0].SubItems[0].Text);
-                //listitem.SubItems.Add(lstRacun.SelectedItems[0].SubItems[1].Text);
-                //lstProizvodi.Items.Add(listitem);
 
                 lstRacun.SelectedItems[0].Remove();
                 izracunajIznos();
@@ -118,8 +114,6 @@ namespace Aplikacija_ZUSMR
                     sqlupit = "UPDATE Proizvod set Kolicina = Kolicina - " + int.Parse(lstRacun.Items[0].SubItems[2].Text) + " WHERE ID_proizvoda = " + int.Parse(lstRacun.Items[i].SubItems[0].Text);
                     Baza.Instance.IzvrsavanjeUpita(sqlupit);
                 }
-
-                //TU SAD TRIBA DODAT METODU KOJACE PROVJERAVAT STANJE I SLAT MAIL AKO TRIBA
 
                 slanjeMaila();
 
@@ -209,6 +203,11 @@ namespace Aplikacija_ZUSMR
 
                 client.Send(mm);
             }
+
+        }
+
+        private void KreirajRacun_Load(object sender, EventArgs e)
+        {
 
         } //kraj metode slanja poruke
 

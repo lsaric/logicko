@@ -38,7 +38,6 @@
             this.Tip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUnos = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             this.btnPretraga = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,14 +67,16 @@
             this.NazivProizvodaca,
             this.Tip});
             this.dgvProizvodi.Location = new System.Drawing.Point(0, 0);
+            this.dgvProizvodi.MultiSelect = false;
             this.dgvProizvodi.Name = "dgvProizvodi";
             this.dgvProizvodi.ReadOnly = true;
+            this.dgvProizvodi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProizvodi.Size = new System.Drawing.Size(745, 150);
             this.dgvProizvodi.TabIndex = 0;
             // 
             // ID_proizvoda
             // 
-            this.ID_proizvoda.HeaderText = "ID";
+            this.ID_proizvoda.HeaderText = "Šifra proizvoda";
             this.ID_proizvoda.Name = "ID_proizvoda";
             this.ID_proizvoda.ReadOnly = true;
             // 
@@ -93,19 +94,19 @@
             // 
             // Kolicina
             // 
-            this.Kolicina.HeaderText = "Kolicina";
+            this.Kolicina.HeaderText = "Količina";
             this.Kolicina.Name = "Kolicina";
             this.Kolicina.ReadOnly = true;
             // 
             // NazivSkladista
             // 
-            this.NazivSkladista.HeaderText = "Skladiste";
+            this.NazivSkladista.HeaderText = "Skladište";
             this.NazivSkladista.Name = "NazivSkladista";
             this.NazivSkladista.ReadOnly = true;
             // 
             // NazivProizvodaca
             // 
-            this.NazivProizvodaca.HeaderText = "Proizvodac";
+            this.NazivProizvodaca.HeaderText = "Proizvođač";
             this.NazivProizvodaca.Name = "NazivProizvodaca";
             this.NazivProizvodaca.ReadOnly = true;
             // 
@@ -134,16 +135,6 @@
             this.btnUredi.Text = "Uredi";
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
-            // 
-            // btnOsvjezi
-            // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(502, 225);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(108, 33);
-            this.btnOsvjezi.TabIndex = 4;
-            this.btnOsvjezi.Text = "Osvjezi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
             // 
             // btnPretraga
             // 
@@ -263,12 +254,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPretraga);
-            this.Controls.Add(this.btnOsvjezi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvProizvodi);
             this.Name = "nmbOd";
-            this.Text = "ProizvodiPrikaz";
+            this.Text = "Prikaz proizvoda";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbOdC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbDo)).EndInit();
@@ -280,16 +270,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvProizvodi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_proizvoda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kolicina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NazivSkladista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NazivProizvodaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tip;
         private System.Windows.Forms.Button btnUnos;
         private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.Button btnPretraga;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -301,5 +283,12 @@
         private System.Windows.Forms.ComboBox cmbTip;
         private System.Windows.Forms.NumericUpDown nmbOdC;
         private System.Windows.Forms.NumericUpDown nmbDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_proizvoda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Naziv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kolicina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NazivSkladista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NazivProizvodaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tip;
     }
 }

@@ -124,7 +124,7 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajKupca";
-            this.Text = "DodajKupca";
+            this.Text = "Dodaj kupca";
             this.ResumeLayout(false);
             this.PerformLayout();
 

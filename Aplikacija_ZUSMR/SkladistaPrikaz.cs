@@ -41,6 +41,7 @@ namespace Aplikacija_ZUSMR
         private void btnUnos_Click(object sender, EventArgs e)
         {
            DodajSkladiste prikaz = new DodajSkladiste(1);
+           prikaz.FormClosed += new FormClosedEventHandler(prikaz_FormClosed);
            prikaz.Show();
         }
 
@@ -48,16 +49,21 @@ namespace Aplikacija_ZUSMR
         {
           if (dgvSkladista.SelectedRows.Count == 1)
             {
-                DodajSkladiste UrediSkladiste = new DodajSkladiste(2);
+                DodajSkladiste prikaz = new DodajSkladiste(2);
 
-                UrediSkladiste.txtID.Text = dgvSkladista.SelectedRows[0].Cells[0].Value.ToString();
-                UrediSkladiste.txtNaziv.Text = dgvSkladista.SelectedRows[0].Cells[1].Value.ToString();
-                UrediSkladiste.txtKapacitet.Text = dgvSkladista.SelectedRows[0].Cells[2].Value.ToString();   
+                prikaz.txtID.Text = dgvSkladista.SelectedRows[0].Cells[0].Value.ToString();
+                prikaz.txtNaziv.Text = dgvSkladista.SelectedRows[0].Cells[1].Value.ToString();
+                prikaz.txtKapacitet.Text = dgvSkladista.SelectedRows[0].Cells[2].Value.ToString();
 
-                UrediSkladiste.Show();
+                prikaz.FormClosed += new FormClosedEventHandler(prikaz_FormClosed);
+                prikaz.Show();
             }
         }
 
+        void prikaz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dgvRefresh();
+        }
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
