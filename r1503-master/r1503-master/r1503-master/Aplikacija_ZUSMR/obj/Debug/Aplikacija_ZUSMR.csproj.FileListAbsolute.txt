@@ -284,3 +284,6 @@ C:\Users\Rok\Desktop\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Vo
 C:\Users\Rok\Desktop\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.VoditeljSkladista.resources
 C:\Users\Rok\Desktop\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.Zaposlenici.resources
 C:\Users\Rok\Desktop\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.csproj.GenerateResource.Cache
+C:\Users\Rok\Desktop\r1503-master\r1503-master\r1503-master\Aplikacija_ZUSMR\bin\Debug\Aplikacija_ZUSMR.exe.config
+C:\Users\Rok\Desktop\r1503-master\r1503-master\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.exe
+C:\Users\Rok\Desktop\r1503-master\r1503-master\r1503-master\Aplikacija_ZUSMR\obj\Debug\Aplikacija_ZUSMR.pdb
