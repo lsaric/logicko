@@ -129,7 +129,9 @@
             this.lstProizvodi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.Naziv});
+            this.lstProizvodi.FullRowSelect = true;
             this.lstProizvodi.Location = new System.Drawing.Point(12, 140);
+            this.lstProizvodi.MultiSelect = false;
             this.lstProizvodi.Name = "lstProizvodi";
             this.lstProizvodi.Size = new System.Drawing.Size(219, 150);
             this.lstProizvodi.TabIndex = 12;
@@ -151,7 +153,9 @@
             this.ID_,
             this.Naziv_,
             this.Kolicina});
+            this.lstNarudzba.FullRowSelect = true;
             this.lstNarudzba.Location = new System.Drawing.Point(368, 140);
+            this.lstNarudzba.MultiSelect = false;
             this.lstNarudzba.Name = "lstNarudzba";
             this.lstNarudzba.Size = new System.Drawing.Size(219, 150);
             this.lstNarudzba.TabIndex = 13;

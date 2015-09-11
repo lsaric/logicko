@@ -42,44 +42,52 @@ namespace Aplikacija_ZUSMR
             if (lstProizvodi.SelectedItems.Count == 1)
             {
                 int kolicina = int.Parse(lstProizvodi.SelectedItems[0].SubItems[2].Text);
-                if (nmKolicina.Value > kolicina)
+                if (nmKolicina.Value <= 0)
                 {
-                    MessageBox.Show("Unesena kolicina visa nego zaliha!");
+                    MessageBox.Show("Unesite ispravnu količinu!");
                 }
                 else
                 {
-                    string ID = (lstProizvodi.SelectedItems[0].SubItems[0].Text);
-                    string naziv = lstProizvodi.SelectedItems[0].SubItems[1].Text;
-                    int cijena = int.Parse(lstProizvodi.SelectedItems[0].SubItems[3].Text);
-                    bool exsists = false;
-
-                    for (int i = 0; i < lstRacun.Items.Count; i++)
+                    if (nmKolicina.Value > kolicina)
                     {
-                        if (lstRacun.Items[i].SubItems[0].Text == ID)
-                        {
-                            exsists = true;
-                        }
-                    }
-
-                    if (exsists)
-                    {
-                        MessageBox.Show("Taj proizvod je dodan u racun!");
+                        MessageBox.Show("Unesena kolicina visa nego zaliha!");
                     }
                     else
                     {
+                        string ID = (lstProizvodi.SelectedItems[0].SubItems[0].Text);
+                        string naziv = lstProizvodi.SelectedItems[0].SubItems[1].Text;
+                        int cijena = int.Parse(lstProizvodi.SelectedItems[0].SubItems[3].Text);
+                        bool exsists = false;
 
-                        ListViewItem listitem = new ListViewItem(ID);
-                        listitem.SubItems.Add(naziv);
-                        listitem.SubItems.Add(nmKolicina.Value.ToString()); 
-                        listitem.SubItems.Add((nmKolicina.Value * cijena).ToString());
-                        lstRacun.Items.Add(listitem);
-                        nmKolicina.Value = 0;
+                        for (int i = 0; i < lstRacun.Items.Count; i++)
+                        {
+                            if (lstRacun.Items[i].SubItems[0].Text == ID)
+                            {
+                                exsists = true;
+                            }
+                        }
 
-                        izracunajIznos();
+                        if (exsists)
+                        {
+                            MessageBox.Show("Taj proizvod je dodan u racun!");
+                        }
+                        else
+                        {
+
+                            ListViewItem listitem = new ListViewItem(ID);
+                            listitem.SubItems.Add(naziv);
+                            listitem.SubItems.Add(nmKolicina.Value.ToString());
+                            listitem.SubItems.Add((nmKolicina.Value * cijena).ToString());
+                            lstRacun.Items.Add(listitem);
+                            nmKolicina.Value = 0;
+                            
+                            
+                            izracunajIznos();
+                        }
                     }
                 }
+
             }
-            
         }
 
         private void btnUkloni_Click(object sender, EventArgs e)
@@ -117,8 +125,9 @@ namespace Aplikacija_ZUSMR
 
                 slanjeMaila();
 
-
+                MessageBox.Show("Račun kreiran!");
                 this.Close();
+                
 
             }
         }

@@ -70,7 +70,7 @@ namespace Aplikacija_ZUSMR
         {
             DodajProizvod dProizvod = new DodajProizvod(1);
             dProizvod.FormClosed += new FormClosedEventHandler(dProizvod_FormClosed);
-            dProizvod.Show();
+            dProizvod.ShowDialog();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace Aplikacija_ZUSMR
                 dProizvod.txtKolicina.Text = dgvProizvodi.SelectedRows[0].Cells[3].Value.ToString();
 
                 dProizvod.FormClosed += new FormClosedEventHandler(dProizvod_FormClosed);
-                dProizvod.Show();
+                dProizvod.ShowDialog();
             }
         }
 

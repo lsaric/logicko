@@ -42,7 +42,7 @@ namespace Aplikacija_ZUSMR
         {
             Dodaj_Tip_Zaposlenja Dodaj_tip = new Dodaj_Tip_Zaposlenja(1);
             Dodaj_tip.FormClosed += new FormClosedEventHandler(Dodaj_tip_FormClosed);
-            Dodaj_tip.Show();
+            Dodaj_tip.ShowDialog();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace Aplikacija_ZUSMR
                 Dodaj_tip.txtOpis.Text = dgvTipZaposlenja.SelectedRows[0].Cells[1].Value.ToString();
 
                 Dodaj_tip.FormClosed += new FormClosedEventHandler(Dodaj_tip_FormClosed);
-                Dodaj_tip.Show();
+                Dodaj_tip.ShowDialog();
             }
         }
 

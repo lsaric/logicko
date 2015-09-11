@@ -42,8 +42,9 @@ namespace Aplikacija_ZUSMR
         private void btnUnos_Click(object sender, EventArgs e)
         {
             DodajKupca dKu = new DodajKupca(1);
-            dKu.FormClosed += new FormClosedEventHandler(dKu_FormClosed);
-            dKu.Show();
+           // dKu.FormClosed += new FormClosedEventHandler(dKu_FormClosed);
+            dKu.ShowDialog();
+            dgvRefresh();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -57,7 +58,8 @@ namespace Aplikacija_ZUSMR
                 dKu.txtNaziv.Text = dgvKupci.SelectedRows[0].Cells[2].Value.ToString();
 
                 dKu.FormClosed += new FormClosedEventHandler(dKu_FormClosed);
-                dKu.Show();
+                dKu.ShowDialog();
+                dgvRefresh();
             }
         }
 

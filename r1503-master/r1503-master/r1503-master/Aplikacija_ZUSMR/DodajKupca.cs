@@ -34,11 +34,7 @@ namespace Aplikacija_ZUSMR
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }
-            if (dodajkupca == null || dodajkupca.IsDisposed)
-            {
-                dodajkupca = new nmbOd();
-            }
-            dodajkupca.Show();
+           
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)

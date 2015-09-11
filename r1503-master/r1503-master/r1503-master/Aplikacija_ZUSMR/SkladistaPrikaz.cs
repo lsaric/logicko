@@ -42,7 +42,7 @@ namespace Aplikacija_ZUSMR
         {
            DodajSkladiste prikaz = new DodajSkladiste(1);
            prikaz.FormClosed += new FormClosedEventHandler(prikaz_FormClosed);
-           prikaz.Show();
+           prikaz.ShowDialog();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace Aplikacija_ZUSMR
                 prikaz.txtKapacitet.Text = dgvSkladista.SelectedRows[0].Cells[2].Value.ToString();
 
                 prikaz.FormClosed += new FormClosedEventHandler(prikaz_FormClosed);
-                prikaz.Show();
+                prikaz.ShowDialog();
             }
         }
 

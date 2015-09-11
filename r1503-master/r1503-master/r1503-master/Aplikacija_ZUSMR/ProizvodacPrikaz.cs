@@ -13,7 +13,7 @@ namespace Aplikacija_ZUSMR
     public partial class ProizvodacPrikaz : Form
     {
         DodajProizvodaca dPro = null;
-        DodajProizvodaca dPro1 = null;//ja san svugdi samo cp ono sta si reka, nisan vako nista gleda i minja ka i ti
+        DodajProizvodaca dPro1 = null;
         public ProizvodacPrikaz()
         {
             InitializeComponent();
@@ -40,28 +40,33 @@ namespace Aplikacija_ZUSMR
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            if (dPro == null || dPro.IsDisposed)
-            { 
+           /* if (dPro == null || dPro.IsDisposed)
+            {   
                 dPro.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
             }
             
-            dPro.Show();
+            dPro.ShowDialog();
+            */
+            DodajProizvodaca novi = new DodajProizvodaca(1);
+            novi.ShowDialog();
+            dgvRefresh();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
         {
             if (dgvProizvodac.SelectedRows.Count == 1)
             {
-                if (dPro1 == null || dPro1.IsDisposed)
-                {
+               // if (dPro1 == null || dPro1.IsDisposed)
+                //{
                     dPro1 = new DodajProizvodaca(2);
-                }
+                    
+                //}
                 dPro1.txtID.Text = dgvProizvodac.SelectedRows[0].Cells[0].Value.ToString();
                 dPro1.txtNaziv.Text = dgvProizvodac.SelectedRows[0].Cells[1].Value.ToString();
 
                 dPro1.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
 
-                dPro1.Show();
+                dPro1.ShowDialog();
             }
         }
 

@@ -41,7 +41,7 @@ namespace Aplikacija_ZUSMR
         {
             DodajTipProizvoda DodajTipPr = new DodajTipProizvoda(1);
             DodajTipPr.FormClosed += new FormClosedEventHandler(DodajTipPr_FormClosed);
-            DodajTipPr.Show();
+            DodajTipPr.ShowDialog();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Aplikacija_ZUSMR
                 DodajTipPr.txtTip.Text = dgvTipProizvoda.SelectedRows[0].Cells[1].Value.ToString();
 
                 DodajTipPr.FormClosed += new FormClosedEventHandler(DodajTipPr_FormClosed);
-                DodajTipPr.Show();
+                DodajTipPr.ShowDialog();
             }
         }
 

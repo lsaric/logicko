@@ -47,7 +47,7 @@ namespace Aplikacija_ZUSMR
         {
             DodajZaposlenika dodaj = new DodajZaposlenika(1);
             dodaj.FormClosed += new FormClosedEventHandler(dodaj_FormClosed);
-            dodaj.Show();
+            dodaj.ShowDialog();
         }
 
         private void btnOsvjezi_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace Aplikacija_ZUSMR
                 dodaj.txtLozinka.Text = dgvZaposlenici.SelectedRows[0].Cells[4].Value.ToString();
 
                 dodaj.FormClosed += new FormClosedEventHandler(dodaj_FormClosed);
-                dodaj.Show();
+                dodaj.ShowDialog();
             }
         }
 

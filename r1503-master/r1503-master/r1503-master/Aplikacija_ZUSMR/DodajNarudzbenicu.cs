@@ -78,11 +78,7 @@ namespace Aplikacija_ZUSMR
                Baza.Instance.IzvrsavanjeUpita(upit);
                this.Close();
            }
-           if (dodajnarudzbenicu == null || dodajnarudzbenicu.IsDisposed)
-           {
-               dodajnarudzbenicu = new nmbOd();
-           }
-           dodajnarudzbenicu.Show();
+         
 
         }
 

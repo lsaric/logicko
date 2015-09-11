@@ -50,7 +50,7 @@ namespace Aplikacija_ZUSMR
         {
             DodajStrojOpremu stroj = new DodajStrojOpremu(1);
             stroj.FormClosed += new FormClosedEventHandler(stroj_FormClosed);
-            stroj.Show();
+            stroj.ShowDialog();
         }
 
         private void btnUredi_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Aplikacija_ZUSMR
                 stroj.txtTip.Text = dgvStrojevi.SelectedRows[0].Cells[1].Value.ToString();
 
                 stroj.FormClosed += new FormClosedEventHandler(stroj_FormClosed);
-                stroj.Show();
+                stroj.ShowDialog();
             }
         }
 

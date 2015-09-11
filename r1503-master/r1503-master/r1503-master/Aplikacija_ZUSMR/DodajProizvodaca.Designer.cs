@@ -103,6 +103,7 @@
             this.Controls.Add(this.btnUnos);
             this.Name = "DodajProizvodaca";
             this.Text = "Ddodaj proizvođača";
+            this.Load += new System.EventHandler(this.DodajProizvodaca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

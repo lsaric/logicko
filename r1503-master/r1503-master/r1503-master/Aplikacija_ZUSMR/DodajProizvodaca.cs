@@ -42,5 +42,10 @@ namespace Aplikacija_ZUSMR
         {
             this.Close();
         }
+
+        private void DodajProizvodaca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

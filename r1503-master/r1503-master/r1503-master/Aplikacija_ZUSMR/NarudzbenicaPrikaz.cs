@@ -49,14 +49,14 @@ namespace Aplikacija_ZUSMR
 
                 UrediNarudzbenicu.txtID.Text = dgvNarudzbenica.SelectedRows[0].Cells[0].Value.ToString();
                 UrediNarudzbenicu.txtKontakt.Text = dgvNarudzbenica.SelectedRows[0].Cells[1].Value.ToString();
-                UrediNarudzbenicu.Show();
+                UrediNarudzbenicu.ShowDialog();
             }
         }
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
             DodajNarudzbenicu DodajNar = new DodajNarudzbenicu(1);
-            DodajNar.Show();
+            DodajNar.ShowDialog();
             
         }
 

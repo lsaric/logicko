@@ -40,7 +40,7 @@ namespace Aplikacija_ZUSMR
             this.cmbSkladiste.DisplayMember = "Naziv";
             this.cmbSkladiste.ValueMember = "ID_skladista";
         }
-
+        nmbOd nmb;
         private void btnUnos_Click(object sender, EventArgs e)
         {
             if (U == 1)
@@ -55,13 +55,11 @@ namespace Aplikacija_ZUSMR
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }
-            if (dodajproizvod == null || dodajproizvod.IsDisposed)
-            {
-                dodajproizvod = new nmbOd();
-            }
-            dodajproizvod.Show();
+           
+            
+            
         }
-        //dodava san jer kazen ti nisan na te gumboe unos i uredi radia, nego san na ove
+        
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
