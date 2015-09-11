@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvKupci = new System.Windows.Forms.DataGridView();
+            this.btnUnos = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
             this.ID_kupca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kontakt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUnos = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKupci)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,35 +45,17 @@
             this.ID_kupca,
             this.Kontakt,
             this.Naziv});
-            this.dgvKupci.Location = new System.Drawing.Point(0, -1);
+            this.dgvKupci.Location = new System.Drawing.Point(12, 12);
             this.dgvKupci.MultiSelect = false;
             this.dgvKupci.Name = "dgvKupci";
             this.dgvKupci.ReadOnly = true;
             this.dgvKupci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKupci.Size = new System.Drawing.Size(345, 175);
+            this.dgvKupci.Size = new System.Drawing.Size(695, 175);
             this.dgvKupci.TabIndex = 0;
-            // 
-            // ID_kupca
-            // 
-            this.ID_kupca.HeaderText = "Šifra kupca";
-            this.ID_kupca.Name = "ID_kupca";
-            this.ID_kupca.ReadOnly = true;
-            // 
-            // Kontakt
-            // 
-            this.Kontakt.HeaderText = "Kontakt";
-            this.Kontakt.Name = "Kontakt";
-            this.Kontakt.ReadOnly = true;
-            // 
-            // Naziv
-            // 
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(47, 180);
+            this.btnUnos.Location = new System.Drawing.Point(12, 206);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 1;
@@ -83,7 +65,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(194, 219);
+            this.btnUredi.Location = new System.Drawing.Point(136, 206);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 2;
@@ -91,11 +73,32 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
+            // ID_kupca
+            // 
+            this.ID_kupca.HeaderText = "Šifra kupca";
+            this.ID_kupca.Name = "ID_kupca";
+            this.ID_kupca.ReadOnly = true;
+            this.ID_kupca.Width = 200;
+            // 
+            // Kontakt
+            // 
+            this.Kontakt.HeaderText = "Kontakt";
+            this.Kontakt.Name = "Kontakt";
+            this.Kontakt.ReadOnly = true;
+            this.Kontakt.Width = 200;
+            // 
+            // Naziv
+            // 
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 250;
+            // 
             // KupciPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 262);
+            this.ClientSize = new System.Drawing.Size(719, 327);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvKupci);

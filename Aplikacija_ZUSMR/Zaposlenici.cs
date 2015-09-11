@@ -91,5 +91,10 @@ namespace Aplikacija_ZUSMR
             }
         }
 
+        private void Zaposlenici_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

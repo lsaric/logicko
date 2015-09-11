@@ -19,24 +19,43 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči refrenta prodaje!";
         }
-
+        KupciPrikaz kupac;
         private void kupacToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (PrikazKupci == null || PrikazKupci.IsDisposed)
+            if (kupac == null || kupac.IsDisposed)
             {
-                PrikazKupci = new KupciPrikaz();
-            }
-            PrikazKupci.Show();
-        }
+                kupac = new KupciPrikaz();
+                kupac.MdiParent = this;
+                kupac.Show();
+                kupac.Dock = DockStyle.Fill;
+                kupac.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                kupac.Activate();
+            }   
+        }
+        KreirajRacun racun;
         private void računiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (kr == null || kr.IsDisposed)
+            if (racun == null || racun.IsDisposed)
             {
-                kr = new KreirajRacun();
+                racun = new KreirajRacun();
+                racun.MdiParent = this;
+                racun.Show();
+                racun.Dock = DockStyle.Fill;
+                racun.WindowState = FormWindowState.Maximized;
+
+
             }
-            
-            kr.Show();
+
+            else
+            {
+                racun.Activate();
+            }   
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

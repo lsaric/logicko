@@ -20,33 +20,62 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči voditelja nabave!";
         }
-
+        ProizvodacPrikaz proizvodjac;
         private void proizvodacToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (proizvodacPrikaz == null || proizvodacPrikaz.IsDisposed)
+            if (proizvodjac == null || proizvodjac.IsDisposed)
             {
-                proizvodacPrikaz = new ProizvodacPrikaz();
-            }
-            
-            proizvodacPrikaz.Show();
-        }
+                proizvodjac = new ProizvodacPrikaz();
+                proizvodjac.MdiParent = this;
+                proizvodjac.Show();
+                proizvodjac.Dock = DockStyle.Fill;
+                proizvodjac.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                proizvodjac.Activate();
+            }   
+        }
+        NarudzbenicaPrikaz narudzbenica;
         private void narudzbenicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (narudzbenicaPrikaz == null || narudzbenicaPrikaz.IsDisposed)
+            if (narudzbenica == null || narudzbenica.IsDisposed)
             {
-                narudzbenicaPrikaz = new NarudzbenicaPrikaz();
-            }
-            narudzbenicaPrikaz.Show();
-        }
+                narudzbenica = new NarudzbenicaPrikaz();
+                narudzbenica.MdiParent = this;
+                narudzbenica.Show();
+                narudzbenica.Dock = DockStyle.Fill;
+                narudzbenica.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                narudzbenica.Activate();
+            }   
+        }
+        nmbOd proizvodi;
         private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (proizvodacPrikaz == null || proizvodacPrikaz.IsDisposed)
+            if (proizvodi == null || proizvodi.IsDisposed)
             {
-                proizvodprikaz = new nmbOd();
+                proizvodi = new nmbOd();
+                proizvodi.MdiParent = this;
+                proizvodi.Show();
+                proizvodi.Dock = DockStyle.Fill;
+                proizvodi.WindowState = FormWindowState.Maximized;
+
+
             }
-            proizvodprikaz.Show();
+
+            else
+            {
+                proizvodi.Activate();
+            }   
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

@@ -38,7 +38,7 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(21, 171);
+            this.btnUnos.Location = new System.Drawing.Point(12, 183);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(152, 171);
+            this.btnUredi.Location = new System.Drawing.Point(139, 183);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 1;
@@ -63,12 +63,12 @@
             this.dgvTipProizvoda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_tip,
             this.Tip});
-            this.dgvTipProizvoda.Location = new System.Drawing.Point(13, 3);
+            this.dgvTipProizvoda.Location = new System.Drawing.Point(12, 15);
             this.dgvTipProizvoda.MultiSelect = false;
             this.dgvTipProizvoda.Name = "dgvTipProizvoda";
             this.dgvTipProizvoda.ReadOnly = true;
             this.dgvTipProizvoda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipProizvoda.Size = new System.Drawing.Size(259, 150);
+            this.dgvTipProizvoda.Size = new System.Drawing.Size(719, 150);
             this.dgvTipProizvoda.TabIndex = 4;
             // 
             // ID_tip
@@ -76,20 +76,20 @@
             this.ID_tip.HeaderText = "Šifra tipa";
             this.ID_tip.Name = "ID_tip";
             this.ID_tip.ReadOnly = true;
-            this.ID_tip.Width = 80;
+            this.ID_tip.Width = 150;
             // 
             // Tip
             // 
             this.Tip.HeaderText = "Tip";
             this.Tip.Name = "Tip";
             this.Tip.ReadOnly = true;
-            this.Tip.Width = 150;
+            this.Tip.Width = 300;
             // 
             // TipProizvodaPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(744, 262);
             this.Controls.Add(this.dgvTipProizvoda);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvSkladista = new System.Windows.Forms.DataGridView();
+            this.btnUnos = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
             this.ID_skaldista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kapacitet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUnos = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSkladista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,35 +45,17 @@
             this.ID_skaldista,
             this.Naziv,
             this.Kapacitet});
-            this.dgvSkladista.Location = new System.Drawing.Point(-1, -1);
+            this.dgvSkladista.Location = new System.Drawing.Point(12, 12);
             this.dgvSkladista.MultiSelect = false;
             this.dgvSkladista.Name = "dgvSkladista";
             this.dgvSkladista.ReadOnly = true;
             this.dgvSkladista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSkladista.Size = new System.Drawing.Size(343, 150);
+            this.dgvSkladista.Size = new System.Drawing.Size(720, 150);
             this.dgvSkladista.TabIndex = 0;
-            // 
-            // ID_skaldista
-            // 
-            this.ID_skaldista.HeaderText = "Šifra skladišta";
-            this.ID_skaldista.Name = "ID_skaldista";
-            this.ID_skaldista.ReadOnly = true;
-            // 
-            // Naziv
-            // 
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            // 
-            // Kapacitet
-            // 
-            this.Kapacitet.HeaderText = "Kapacitet";
-            this.Kapacitet.Name = "Kapacitet";
-            this.Kapacitet.ReadOnly = true;
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(50, 173);
+            this.btnUnos.Location = new System.Drawing.Point(12, 183);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 1;
@@ -83,7 +65,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(183, 173);
+            this.btnUredi.Location = new System.Drawing.Point(139, 183);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 2;
@@ -91,11 +73,32 @@
             this.btnUredi.UseVisualStyleBackColor = true;
             this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
             // 
+            // ID_skaldista
+            // 
+            this.ID_skaldista.HeaderText = "Šifra skladišta";
+            this.ID_skaldista.Name = "ID_skaldista";
+            this.ID_skaldista.ReadOnly = true;
+            this.ID_skaldista.Width = 150;
+            // 
+            // Naziv
+            // 
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 300;
+            // 
+            // Kapacitet
+            // 
+            this.Kapacitet.HeaderText = "Kapacitet";
+            this.Kapacitet.Name = "Kapacitet";
+            this.Kapacitet.ReadOnly = true;
+            this.Kapacitet.Width = 200;
+            // 
             // SkladistaPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 262);
+            this.ClientSize = new System.Drawing.Size(744, 262);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
             this.Controls.Add(this.dgvSkladista);

@@ -21,44 +21,103 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči voditelja skladišta!";
         }
-
+        SkladistaPrikaz skladiste;
         private void skladišteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (skladista == null || skladista.IsDisposed)
+            if (skladiste == null || skladiste.IsDisposed)
             {
-                skladista = new SkladistaPrikaz();
-            }
-            
-            skladista.Show();
-        }
+                skladiste = new SkladistaPrikaz();
+                skladiste.MdiParent = this;
+                skladiste.Show();
+                skladiste.Dock = DockStyle.Fill;
+                skladiste.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                skladiste.Activate();
+            }   
+        }
+        Strojevi_i_Oprema_Prikaz stroj;
         private void strojeviIOpremaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (strojevi == null || strojevi.IsDisposed)
+            if (stroj == null || stroj.IsDisposed)
             {
-                strojevi = new Strojevi_i_Oprema_Prikaz();
-            }
-            strojevi.Show();
-        }
+                stroj = new Strojevi_i_Oprema_Prikaz();
+                stroj.MdiParent = this;
+                stroj.Show();
+                stroj.Dock = DockStyle.Fill;
+                stroj.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                stroj.Activate();
+            }   
+        }
+        TipProizvodaPrikaz tip_proizvoda;
         private void tipProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
+            if (tip_proizvoda == null || tip_proizvoda.IsDisposed)
+            {
+                tip_proizvoda = new TipProizvodaPrikaz();
+                tip_proizvoda.MdiParent = this;
+                tip_proizvoda.Show();
+                tip_proizvoda.Dock = DockStyle.Fill;
+                tip_proizvoda.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                tip_proizvoda.Activate();
+            }   
+
+        }
+        nmbOd nmb;
         private void pretragaProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (pr == null || pr.IsDisposed)
+            if (nmb == null || nmb.IsDisposed)
             {
-                pr = new nmbOd();
-            }
-            pr.Show();
-        }
+                nmb = new nmbOd();
+                nmb.MdiParent = this;
+                nmb.Show();
+                nmb.Dock = DockStyle.Fill;
+                nmb.WindowState = FormWindowState.Maximized;
 
+
+            }
+
+            else
+            {
+                nmb.Activate();
+            }   
+
+        }
+        ProdajaProizvodaGraf ppg;
         private void prikazStanjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProdajaProizvodaGraf ppg = new ProdajaProizvodaGraf();
-            ppg.ShowDialog();
+            if (ppg == null || ppg.IsDisposed)
+            {
+                ppg = new ProdajaProizvodaGraf();
+                ppg.MdiParent = this;
+                ppg.Show();
+                ppg.Dock = DockStyle.Fill;
+                ppg.WindowState = FormWindowState.Maximized;
+
+
+            }
+
+            else
+            {
+                ppg.Activate();
+            }   
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -66,6 +125,11 @@ namespace Aplikacija_ZUSMR
             this.Close();
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

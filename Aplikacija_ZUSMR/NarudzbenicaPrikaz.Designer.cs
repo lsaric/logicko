@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvNarudzbenica = new System.Windows.Forms.DataGridView();
+            this.btnUnos = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
+            this.btnOsvjezi = new System.Windows.Forms.Button();
             this.ID_narudzbenica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kontakt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ImePrezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnUnos = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbenica)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,41 +48,17 @@
             this.Kontakt,
             this.Datum,
             this.ImePrezime});
-            this.dgvNarudzbenica.Location = new System.Drawing.Point(0, 0);
+            this.dgvNarudzbenica.Location = new System.Drawing.Point(12, 12);
             this.dgvNarudzbenica.MultiSelect = false;
             this.dgvNarudzbenica.Name = "dgvNarudzbenica";
             this.dgvNarudzbenica.ReadOnly = true;
             this.dgvNarudzbenica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNarudzbenica.Size = new System.Drawing.Size(445, 188);
+            this.dgvNarudzbenica.Size = new System.Drawing.Size(721, 173);
             this.dgvNarudzbenica.TabIndex = 0;
-            // 
-            // ID_narudzbenica
-            // 
-            this.ID_narudzbenica.HeaderText = "Šifra narudžbenice";
-            this.ID_narudzbenica.Name = "ID_narudzbenica";
-            this.ID_narudzbenica.ReadOnly = true;
-            // 
-            // Kontakt
-            // 
-            this.Kontakt.HeaderText = "Kontakt";
-            this.Kontakt.Name = "Kontakt";
-            this.Kontakt.ReadOnly = true;
-            // 
-            // Datum
-            // 
-            this.Datum.HeaderText = "Datum";
-            this.Datum.Name = "Datum";
-            this.Datum.ReadOnly = true;
-            // 
-            // ImePrezime
-            // 
-            this.ImePrezime.HeaderText = "Ime Prezime";
-            this.ImePrezime.Name = "ImePrezime";
-            this.ImePrezime.ReadOnly = true;
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(21, 208);
+            this.btnUnos.Location = new System.Drawing.Point(12, 203);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 1;
@@ -92,7 +68,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(173, 208);
+            this.btnUredi.Location = new System.Drawing.Point(143, 203);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 2;
@@ -102,7 +78,7 @@
             // 
             // btnOsvjezi
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(326, 208);
+            this.btnOsvjezi.Location = new System.Drawing.Point(269, 203);
             this.btnOsvjezi.Name = "btnOsvjezi";
             this.btnOsvjezi.Size = new System.Drawing.Size(107, 33);
             this.btnOsvjezi.TabIndex = 3;
@@ -110,11 +86,39 @@
             this.btnOsvjezi.UseVisualStyleBackColor = true;
             this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click_1);
             // 
+            // ID_narudzbenica
+            // 
+            this.ID_narudzbenica.HeaderText = "Šifra narudžbenice";
+            this.ID_narudzbenica.Name = "ID_narudzbenica";
+            this.ID_narudzbenica.ReadOnly = true;
+            this.ID_narudzbenica.Width = 150;
+            // 
+            // Kontakt
+            // 
+            this.Kontakt.HeaderText = "Kontakt";
+            this.Kontakt.Name = "Kontakt";
+            this.Kontakt.ReadOnly = true;
+            this.Kontakt.Width = 200;
+            // 
+            // Datum
+            // 
+            this.Datum.HeaderText = "Datum";
+            this.Datum.Name = "Datum";
+            this.Datum.ReadOnly = true;
+            this.Datum.Width = 120;
+            // 
+            // ImePrezime
+            // 
+            this.ImePrezime.HeaderText = "Ime Prezime";
+            this.ImePrezime.Name = "ImePrezime";
+            this.ImePrezime.ReadOnly = true;
+            this.ImePrezime.Width = 200;
+            // 
             // NarudzbenicaPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 262);
+            this.ClientSize = new System.Drawing.Size(745, 262);
             this.Controls.Add(this.btnOsvjezi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);
@@ -132,10 +136,10 @@
         private System.Windows.Forms.DataGridView dgvNarudzbenica;
         private System.Windows.Forms.Button btnUnos;
         private System.Windows.Forms.Button btnUredi;
+        private System.Windows.Forms.Button btnOsvjezi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_narudzbenica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kontakt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
         private System.Windows.Forms.DataGridViewTextBoxColumn ImePrezime;
-        private System.Windows.Forms.Button btnOsvjezi;
     }
 }

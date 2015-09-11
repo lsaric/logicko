@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvProizvodi = new System.Windows.Forms.DataGridView();
-            this.ID_proizvoda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NazivSkladista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NazivProizvodaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUnos = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnPretraga = new System.Windows.Forms.Button();
@@ -49,6 +42,13 @@
             this.cmbTip = new System.Windows.Forms.ComboBox();
             this.nmbOdC = new System.Windows.Forms.NumericUpDown();
             this.nmbDo = new System.Windows.Forms.NumericUpDown();
+            this.ID_proizvoda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NazivSkladista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NazivProizvodaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbOdC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbDo)).BeginInit();
@@ -66,55 +66,13 @@
             this.NazivSkladista,
             this.NazivProizvodaca,
             this.Tip});
-            this.dgvProizvodi.Location = new System.Drawing.Point(0, 0);
+            this.dgvProizvodi.Location = new System.Drawing.Point(16, 12);
             this.dgvProizvodi.MultiSelect = false;
             this.dgvProizvodi.Name = "dgvProizvodi";
             this.dgvProizvodi.ReadOnly = true;
             this.dgvProizvodi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProizvodi.Size = new System.Drawing.Size(745, 150);
+            this.dgvProizvodi.Size = new System.Drawing.Size(717, 150);
             this.dgvProizvodi.TabIndex = 0;
-            // 
-            // ID_proizvoda
-            // 
-            this.ID_proizvoda.HeaderText = "Šifra proizvoda";
-            this.ID_proizvoda.Name = "ID_proizvoda";
-            this.ID_proizvoda.ReadOnly = true;
-            // 
-            // Naziv
-            // 
-            this.Naziv.HeaderText = "Naziv";
-            this.Naziv.Name = "Naziv";
-            this.Naziv.ReadOnly = true;
-            // 
-            // Cijena
-            // 
-            this.Cijena.HeaderText = "Cijena";
-            this.Cijena.Name = "Cijena";
-            this.Cijena.ReadOnly = true;
-            // 
-            // Kolicina
-            // 
-            this.Kolicina.HeaderText = "Količina";
-            this.Kolicina.Name = "Kolicina";
-            this.Kolicina.ReadOnly = true;
-            // 
-            // NazivSkladista
-            // 
-            this.NazivSkladista.HeaderText = "Skladište";
-            this.NazivSkladista.Name = "NazivSkladista";
-            this.NazivSkladista.ReadOnly = true;
-            // 
-            // NazivProizvodaca
-            // 
-            this.NazivProizvodaca.HeaderText = "Proizvođač";
-            this.NazivProizvodaca.Name = "NazivProizvodaca";
-            this.NazivProizvodaca.ReadOnly = true;
-            // 
-            // Tip
-            // 
-            this.Tip.HeaderText = "Tip";
-            this.Tip.Name = "Tip";
-            this.Tip.ReadOnly = true;
             // 
             // btnUnos
             // 
@@ -237,6 +195,55 @@
             this.nmbDo.Name = "nmbDo";
             this.nmbDo.Size = new System.Drawing.Size(108, 20);
             this.nmbDo.TabIndex = 16;
+            // 
+            // ID_proizvoda
+            // 
+            this.ID_proizvoda.HeaderText = "Šifra proizvoda";
+            this.ID_proizvoda.Name = "ID_proizvoda";
+            this.ID_proizvoda.ReadOnly = true;
+            this.ID_proizvoda.Width = 60;
+            // 
+            // Naziv
+            // 
+            this.Naziv.HeaderText = "Naziv";
+            this.Naziv.Name = "Naziv";
+            this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 130;
+            // 
+            // Cijena
+            // 
+            this.Cijena.HeaderText = "Cijena";
+            this.Cijena.Name = "Cijena";
+            this.Cijena.ReadOnly = true;
+            this.Cijena.Width = 70;
+            // 
+            // Kolicina
+            // 
+            this.Kolicina.HeaderText = "Količina";
+            this.Kolicina.Name = "Kolicina";
+            this.Kolicina.ReadOnly = true;
+            this.Kolicina.Width = 70;
+            // 
+            // NazivSkladista
+            // 
+            this.NazivSkladista.HeaderText = "Skladište";
+            this.NazivSkladista.Name = "NazivSkladista";
+            this.NazivSkladista.ReadOnly = true;
+            this.NazivSkladista.Width = 90;
+            // 
+            // NazivProizvodaca
+            // 
+            this.NazivProizvodaca.HeaderText = "Proizvođač";
+            this.NazivProizvodaca.Name = "NazivProizvodaca";
+            this.NazivProizvodaca.ReadOnly = true;
+            this.NazivProizvodaca.Width = 140;
+            // 
+            // Tip
+            // 
+            this.Tip.HeaderText = "Tip";
+            this.Tip.Name = "Tip";
+            this.Tip.ReadOnly = true;
+            this.Tip.Width = 110;
             // 
             // nmbOd
             // 

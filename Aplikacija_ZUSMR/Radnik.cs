@@ -18,14 +18,24 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči radnika!";
         }
-
+        nmbOd nmb;
         private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (proizvodprikaz == null || proizvodprikaz.IsDisposed)
+            if (nmb == null || nmb.IsDisposed)
             {
-                proizvodprikaz = new nmbOd();
+                nmb = new nmbOd();
+                nmb.MdiParent = this;
+                nmb.Show();
+                nmb.Dock = DockStyle.Fill;
+                nmb.WindowState = FormWindowState.Maximized;
+
+
             }
-            proizvodprikaz.Show();
+
+            else
+            {
+                nmb.Activate();
+            }   
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

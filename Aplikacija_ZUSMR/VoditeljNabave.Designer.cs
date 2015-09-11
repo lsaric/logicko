@@ -41,7 +41,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.narudzbenicaToolStripMenuItem,
             this.proizvodacToolStripMenuItem,
@@ -49,42 +48,38 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(403, 261);
+            this.menuStrip1.Size = new System.Drawing.Size(780, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // narudzbenicaToolStripMenuItem
             // 
-            this.narudzbenicaToolStripMenuItem.AutoSize = false;
             this.narudzbenicaToolStripMenuItem.Name = "narudzbenicaToolStripMenuItem";
             this.narudzbenicaToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(100, 258);
+            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.narudzbenicaToolStripMenuItem.Text = "Narudžbenica";
             this.narudzbenicaToolStripMenuItem.Click += new System.EventHandler(this.narudzbenicaToolStripMenuItem_Click);
             // 
             // proizvodacToolStripMenuItem
             // 
-            this.proizvodacToolStripMenuItem.AutoSize = false;
             this.proizvodacToolStripMenuItem.Name = "proizvodacToolStripMenuItem";
             this.proizvodacToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.proizvodacToolStripMenuItem.Size = new System.Drawing.Size(100, 258);
+            this.proizvodacToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.proizvodacToolStripMenuItem.Text = "Proizvođač";
             this.proizvodacToolStripMenuItem.Click += new System.EventHandler(this.proizvodacToolStripMenuItem_Click);
             // 
             // proizvodiToolStripMenuItem
             // 
-            this.proizvodiToolStripMenuItem.AutoSize = false;
             this.proizvodiToolStripMenuItem.Name = "proizvodiToolStripMenuItem";
             this.proizvodiToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(100, 258);
+            this.proizvodiToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.proizvodiToolStripMenuItem.Text = "Proizvodi";
             this.proizvodiToolStripMenuItem.Click += new System.EventHandler(this.proizvodiToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.AutoSize = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(90, 258);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 20);
             this.toolStripMenuItem1.Text = "Odjava";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -92,9 +87,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusPoruka});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 298);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(403, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(780, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -108,9 +103,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 261);
+            this.ClientSize = new System.Drawing.Size(780, 320);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VoditeljNabave";
             this.Text = "Voditelj nabave";

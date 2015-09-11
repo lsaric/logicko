@@ -58,7 +58,7 @@
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.ReadOnly = true;
             this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvZaposlenici.Size = new System.Drawing.Size(744, 179);
+            this.dgvZaposlenici.Size = new System.Drawing.Size(744, 172);
             this.dgvZaposlenici.TabIndex = 0;
             // 
             // ID
@@ -105,7 +105,7 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(38, 212);
+            this.btnDodaj.Location = new System.Drawing.Point(12, 203);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(108, 33);
             this.btnDodaj.TabIndex = 1;
@@ -115,7 +115,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(177, 212);
+            this.btnUredi.Location = new System.Drawing.Point(144, 203);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 2;
@@ -127,12 +127,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 297);
+            this.ClientSize = new System.Drawing.Size(764, 262);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.dgvZaposlenici);
             this.Name = "Zaposlenici";
             this.Text = "Prikaz zaposlenika";
+            this.Load += new System.EventHandler(this.Zaposlenici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             this.ResumeLayout(false);
 

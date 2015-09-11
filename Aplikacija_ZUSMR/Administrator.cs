@@ -20,24 +20,42 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na admin kontrolnoj ploči!";
         }
-
+        Zaposlenici zaposlenik;
         private void zaposleniciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (zaposlenici == null || zaposlenici.IsDisposed)
+            if (zaposlenik == null || zaposlenik.IsDisposed)
             {
-                zaposlenici = new Zaposlenici();
-            }
-           
-            zaposlenici.Show();
-        }
+                zaposlenik = new Zaposlenici();
+                zaposlenik.MdiParent = this;
+                zaposlenik.Show();
+                zaposlenik.Dock = DockStyle.Fill;
+                zaposlenik.WindowState = FormWindowState.Maximized;
+                
 
+            }
+
+            else 
+            {
+                zaposlenik.Activate();
+            }   
+        }
+        Tip_zaposlenja tipzaposlenja;
         private void tipZaposlenjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (tip_zaposlenja == null || tip_zaposlenja.IsDisposed)
+            if (tipzaposlenja == null || tipzaposlenja.IsDisposed )
             {
-                tip_zaposlenja = new Tip_zaposlenja();
+                tipzaposlenja = new Tip_zaposlenja();
+                tipzaposlenja.MdiParent = this;
+                tipzaposlenja.Show();
+                tipzaposlenja.Dock = DockStyle.Fill;
+                tipzaposlenja.WindowState = FormWindowState.Maximized;
+                
             }
-            tip_zaposlenja.Show();
+            else
+            {
+                tipzaposlenja.Activate();
+            }   
+            
         }
 
         private void grafToolStripMenuItem_Click(object sender, EventArgs e)

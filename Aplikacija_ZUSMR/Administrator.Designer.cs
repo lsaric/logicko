@@ -40,9 +40,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zaposleniciToolStripMenuItem,
@@ -50,32 +48,29 @@
             this.Odjava});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(386, 262);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // zaposleniciToolStripMenuItem
             // 
-            this.zaposleniciToolStripMenuItem.AutoSize = false;
             this.zaposleniciToolStripMenuItem.Name = "zaposleniciToolStripMenuItem";
             this.zaposleniciToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(120, 258);
+            this.zaposleniciToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.zaposleniciToolStripMenuItem.Text = "Zaposlenici";
             this.zaposleniciToolStripMenuItem.Click += new System.EventHandler(this.zaposleniciToolStripMenuItem_Click);
             // 
             // tipZaposlenjaToolStripMenuItem
             // 
-            this.tipZaposlenjaToolStripMenuItem.AutoSize = false;
             this.tipZaposlenjaToolStripMenuItem.Name = "tipZaposlenjaToolStripMenuItem";
-            this.tipZaposlenjaToolStripMenuItem.Size = new System.Drawing.Size(120, 258);
+            this.tipZaposlenjaToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.tipZaposlenjaToolStripMenuItem.Text = "Tip zaposlenja";
             this.tipZaposlenjaToolStripMenuItem.Click += new System.EventHandler(this.tipZaposlenjaToolStripMenuItem_Click);
             // 
             // Odjava
             // 
-            this.Odjava.AutoSize = false;
             this.Odjava.Name = "Odjava";
-            this.Odjava.Size = new System.Drawing.Size(120, 258);
+            this.Odjava.Size = new System.Drawing.Size(56, 20);
             this.Odjava.Text = "Odjava";
             this.Odjava.Click += new System.EventHandler(this.Odjava_Click);
             // 
@@ -83,9 +78,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusPoruka});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 240);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 290);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(386, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -100,9 +95,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(386, 262);
+            this.ClientSize = new System.Drawing.Size(784, 312);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.Name = "Administrator";
             this.Text = "Administrator";
             this.Load += new System.EventHandler(this.Administrator_Load);

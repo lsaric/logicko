@@ -39,7 +39,7 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(50, 170);
+            this.btnUnos.Location = new System.Drawing.Point(12, 182);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // btnUredi
             // 
-            this.btnUredi.Location = new System.Drawing.Point(184, 170);
+            this.btnUredi.Location = new System.Drawing.Point(138, 182);
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(108, 33);
             this.btnUredi.TabIndex = 1;
@@ -65,12 +65,12 @@
             this.ID_strojeva,
             this.Tip,
             this.Naziv});
-            this.dgvStrojevi.Location = new System.Drawing.Point(1, 0);
+            this.dgvStrojevi.Location = new System.Drawing.Point(12, 12);
             this.dgvStrojevi.MultiSelect = false;
             this.dgvStrojevi.Name = "dgvStrojevi";
             this.dgvStrojevi.ReadOnly = true;
             this.dgvStrojevi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStrojevi.Size = new System.Drawing.Size(344, 150);
+            this.dgvStrojevi.Size = new System.Drawing.Size(720, 150);
             this.dgvStrojevi.TabIndex = 4;
             // 
             // ID_strojeva
@@ -78,24 +78,27 @@
             this.ID_strojeva.HeaderText = "ID strojeva/opreme";
             this.ID_strojeva.Name = "ID_strojeva";
             this.ID_strojeva.ReadOnly = true;
+            this.ID_strojeva.Width = 150;
             // 
             // Tip
             // 
             this.Tip.HeaderText = "Tip";
             this.Tip.Name = "Tip";
             this.Tip.ReadOnly = true;
+            this.Tip.Width = 250;
             // 
             // Naziv
             // 
             this.Naziv.HeaderText = "Naziv";
             this.Naziv.Name = "Naziv";
             this.Naziv.ReadOnly = true;
+            this.Naziv.Width = 250;
             // 
             // Strojevi_i_Oprema_Prikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 262);
+            this.ClientSize = new System.Drawing.Size(744, 262);
             this.Controls.Add(this.dgvStrojevi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnUnos);

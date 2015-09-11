@@ -40,38 +40,34 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kupacToolStripMenuItem,
             this.računiToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(452, 262);
+            this.menuStrip1.Size = new System.Drawing.Size(726, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kupacToolStripMenuItem
             // 
-            this.kupacToolStripMenuItem.AutoSize = false;
             this.kupacToolStripMenuItem.Name = "kupacToolStripMenuItem";
-            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(130, 258);
+            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.kupacToolStripMenuItem.Text = "Kupac";
             this.kupacToolStripMenuItem.Click += new System.EventHandler(this.kupacToolStripMenuItem_Click);
             // 
             // računiToolStripMenuItem
             // 
-            this.računiToolStripMenuItem.AutoSize = false;
             this.računiToolStripMenuItem.Name = "računiToolStripMenuItem";
-            this.računiToolStripMenuItem.Size = new System.Drawing.Size(130, 258);
+            this.računiToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.računiToolStripMenuItem.Text = "Računi";
             this.računiToolStripMenuItem.Click += new System.EventHandler(this.računiToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.AutoSize = false;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(130, 258);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(56, 20);
             this.toolStripMenuItem1.Text = "Odjava";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -79,9 +75,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusPoruka});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 240);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 315);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(452, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(726, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -95,9 +91,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 262);
+            this.ClientSize = new System.Drawing.Size(726, 337);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ReferentProdaje";
             this.Text = "Referent prodaje";

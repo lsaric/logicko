@@ -59,7 +59,7 @@
             this.Kolicina,
             this.Cijena});
             this.lstProizvodi.FullRowSelect = true;
-            this.lstProizvodi.Location = new System.Drawing.Point(304, 33);
+            this.lstProizvodi.Location = new System.Drawing.Point(307, 12);
             this.lstProizvodi.MultiSelect = false;
             this.lstProizvodi.Name = "lstProizvodi";
             this.lstProizvodi.Size = new System.Drawing.Size(375, 107);
@@ -95,7 +95,7 @@
             this.Kolicina_,
             this.Iznos});
             this.lstRacun.FullRowSelect = true;
-            this.lstRacun.Location = new System.Drawing.Point(304, 213);
+            this.lstRacun.Location = new System.Drawing.Point(307, 164);
             this.lstRacun.MultiSelect = false;
             this.lstRacun.Name = "lstRacun";
             this.lstRacun.Size = new System.Drawing.Size(375, 112);
@@ -125,7 +125,7 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(304, 159);
+            this.btnDodaj.Location = new System.Drawing.Point(307, 125);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(108, 33);
             this.btnDodaj.TabIndex = 2;
@@ -135,7 +135,7 @@
             // 
             // btnUkloni
             // 
-            this.btnUkloni.Location = new System.Drawing.Point(418, 159);
+            this.btnUkloni.Location = new System.Drawing.Point(421, 125);
             this.btnUkloni.Name = "btnUkloni";
             this.btnUkloni.Size = new System.Drawing.Size(108, 33);
             this.btnUkloni.TabIndex = 3;
@@ -145,7 +145,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(21, 292);
+            this.btnOK.Location = new System.Drawing.Point(24, 218);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(108, 33);
             this.btnOK.TabIndex = 4;
@@ -155,7 +155,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(149, 292);
+            this.btnOdustani.Location = new System.Drawing.Point(150, 218);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 5;
@@ -166,7 +166,7 @@
             // cmbKupac
             // 
             this.cmbKupac.FormattingEnabled = true;
-            this.cmbKupac.Location = new System.Drawing.Point(83, 33);
+            this.cmbKupac.Location = new System.Drawing.Point(86, 12);
             this.cmbKupac.Name = "cmbKupac";
             this.cmbKupac.Size = new System.Drawing.Size(199, 21);
             this.cmbKupac.TabIndex = 7;
@@ -174,7 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 33);
+            this.label1.Location = new System.Drawing.Point(23, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 8;
@@ -182,7 +182,7 @@
             // 
             // nmKolicina
             // 
-            this.nmKolicina.Location = new System.Drawing.Point(83, 71);
+            this.nmKolicina.Location = new System.Drawing.Point(86, 50);
             this.nmKolicina.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -195,7 +195,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 71);
+            this.label2.Location = new System.Drawing.Point(23, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 10;
@@ -204,7 +204,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 213);
+            this.label3.Location = new System.Drawing.Point(21, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 11;
@@ -212,7 +212,7 @@
             // 
             // txtIznos
             // 
-            this.txtIznos.Location = new System.Drawing.Point(83, 213);
+            this.txtIznos.Location = new System.Drawing.Point(86, 164);
             this.txtIznos.Name = "txtIznos";
             this.txtIznos.Size = new System.Drawing.Size(199, 20);
             this.txtIznos.TabIndex = 12;
