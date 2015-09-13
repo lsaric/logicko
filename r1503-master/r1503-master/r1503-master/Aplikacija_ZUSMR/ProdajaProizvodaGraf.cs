@@ -87,13 +87,17 @@ namespace Aplikacija_ZUSMR
                 List<listaIntova> lista = listaIntova.selectUpit(upit);
 
                 Data = new int[lista.Count];
-
+                int min = 0;
                 for (int i = 0; i < lista.Count; i++)
                 {
                     Data[i] = (int)lista[i].Kolicina;
-
+                    if (lista[i].Kolicina > min)
+                    {
+                        min = lista[i].Kolicina;
+                    }
                 }
                 graf.Data = Data;
+                graf.min = min;
                 PreviousState = 0;
 
                 timer1.Interval = 2000;

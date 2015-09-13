@@ -74,6 +74,8 @@ namespace Aplikacija_ZUSMR
                         else
                         {
 
+                            lstProizvodi.SelectedItems[0].SubItems[2].Text = (kolicina - nmKolicina.Value).ToString();
+
                             ListViewItem listitem = new ListViewItem(ID);
                             listitem.SubItems.Add(naziv);
                             listitem.SubItems.Add(nmKolicina.Value.ToString());
@@ -99,8 +101,19 @@ namespace Aplikacija_ZUSMR
             else
             {
 
-
+                int kolicina = int.Parse(lstRacun.SelectedItems[0].SubItems[2].Text);
+                string id = (lstRacun.SelectedItems[0].SubItems[0].Text);
                 lstRacun.SelectedItems[0].Remove();
+
+                for (int i = 0; i < lstProizvodi.Items.Count; i++)
+                {
+                    if (lstProizvodi.Items[i].SubItems[0].Text == id)
+                    {
+                        int prethodnaKolicina = int.Parse(lstProizvodi.Items[i].SubItems[2].Text) ;
+                        lstProizvodi.Items[i].SubItems[2].Text = (prethodnaKolicina + kolicina).ToString();
+                    }
+                }
+
                 izracunajIznos();
             }
         }
@@ -126,7 +139,10 @@ namespace Aplikacija_ZUSMR
                 slanjeMaila();
 
                 MessageBox.Show("Račun kreiran!");
-                this.Close();
+                txtIznos.Text = "";
+                cmbKupac.SelectedIndex = 0;
+                lstRacun.Items.Clear();
+                //this.Close();
                 
 
             }

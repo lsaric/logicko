@@ -14,6 +14,7 @@ namespace Aplikacija_ZUSMR
     public partial class ucGraph : UserControl
     {
         public int[] Data { get; set; }
+        public int min { get; set; }
 
         public ucGraph()
         {
@@ -29,14 +30,15 @@ namespace Aplikacija_ZUSMR
             int offset2 = 15; // axis offset 
             int offset3 = 5; // data offset x 
             int offset4 = 2; // data offset y 
-            int max = 10; 
+            int offset5 = 50; // za visinu MOJ
+            int max = 8; 
             DrawFrame(g, offset); 
             DrawAxis(g, offset, offset2); 
-            DrawData(g, offset, offset2, offset3, offset4, max);
+            DrawData(g, offset, offset2, offset3, offset4,offset5, max);
 
         }
 
-        private void DrawData(Graphics g, int offset, int offset2, int offset3, int offset4,int max)
+        private void DrawData(Graphics g, int offset, int offset2, int offset3, int offset4, int offset5,int max)
         {
 
             if (Data != null)
@@ -44,11 +46,12 @@ namespace Aplikacija_ZUSMR
 
                 for (int i = 0; i < Data.Length; i++)
                 {
-
-                    g.DrawLine(new Pen(Brushes.Red, 3), new Point(4 * i + offset2 + offset3,
-                        this.Height - offset2 - offset - offset4), new Point(i * 4 + offset2 + offset3,
-                            (this.Height - offset2 - offset) - (Data[i] / max)));
-
+                    
+                    g.DrawLine(new Pen(Brushes.Red, 4), new Point(5 * i + offset2 + offset3,
+                        this.Height - offset2 - offset - offset4), new Point(i * 5 + offset2 + offset3,
+                            (this.Height - offset5) - (Data[i] / max)));
+                    //this.Height - offset2 - offset    
+                    //islo je kroz max Data[i] / min
                 }
 
             }
