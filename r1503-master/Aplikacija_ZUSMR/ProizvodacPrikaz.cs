@@ -25,14 +25,15 @@ namespace Aplikacija_ZUSMR
             {
                 this.dgvProizvodac.Rows.Clear();
             }
-            string upit = "Select * from Proizvodac";
-            List<Proizvodac> proizvodac = Proizvodac.selectUpit(upit);
+            string upit = "select * from Poslovni_entiteti WHERE ID_TipEntiteta = (Select ID_TipEntiteta from Tip_poslovnog_entiteta WHERE Tip = 'Proizvodac')";
+            List<PoslovniEntiteti> proizvodac = PoslovniEntiteti.selectUpit(upit);
 
-            foreach (Proizvodac a in proizvodac)
+            foreach (PoslovniEntiteti a in proizvodac)
             {
                 DataGridViewRow row = (DataGridViewRow)this.dgvProizvodac.Rows[0].Clone();
-                row.Cells[0].Value = a.ID_proizvodac;
+                row.Cells[0].Value = a.ID_PoslovnogEntiteta;
                 row.Cells[1].Value = a.Naziv;
+                row.Cells[2].Value = a.Kontakt;
                 this.dgvProizvodac.Rows.Add(row);
             }
 
@@ -40,13 +41,6 @@ namespace Aplikacija_ZUSMR
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-           /* if (dPro == null || dPro.IsDisposed)
-            {   
-                dPro.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
-            }
-            
-            dPro.ShowDialog();
-            */
             DodajProizvodaca novi = new DodajProizvodaca(1);
             novi.ShowDialog();
             dgvRefresh();
@@ -56,14 +50,11 @@ namespace Aplikacija_ZUSMR
         {
             if (dgvProizvodac.SelectedRows.Count == 1)
             {
-               // if (dPro1 == null || dPro1.IsDisposed)
-                //{
-                    dPro1 = new DodajProizvodaca(2);
-                    
-                //}
+
+                dPro1 = new DodajProizvodaca(2);
                 dPro1.txtID.Text = dgvProizvodac.SelectedRows[0].Cells[0].Value.ToString();
                 dPro1.txtNaziv.Text = dgvProizvodac.SelectedRows[0].Cells[1].Value.ToString();
-
+                dPro1.txtKontakt.Text = dgvProizvodac.SelectedRows[0].Cells[2].Value.ToString();
                 dPro1.FormClosed += new FormClosedEventHandler(dPro_FormClosed);
 
                 dPro1.ShowDialog();
@@ -77,16 +68,6 @@ namespace Aplikacija_ZUSMR
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            if (dgvProizvodac.SelectedRows.Count > 0)
-            {
-                int selectedIndex = dgvProizvodac.SelectedRows[0].Index;
-
-                int rowID = int.Parse(dgvProizvodac[0, selectedIndex].Value.ToString());
-
-                string Obrisi = "DELETE FROM Proizvodac WHERE ID_proizvodac = " + rowID;
-                Baza.Instance.IzvrsavanjeUpita(Obrisi);
-                dgvRefresh();
-            }
         }
 
         private void btnOsvjezi_Click(object sender, EventArgs e)

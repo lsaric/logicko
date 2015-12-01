@@ -13,7 +13,7 @@ namespace Aplikacija_ZUSMR
     public partial class VoditeljNabave : Form
     {
         ProizvodacPrikaz proizvodacPrikaz = null;
-        NarudzbenicaPrikaz narudzbenicaPrikaz = null;
+        PrimkaPrikaz narudzbenicaPrikaz = null;
         nmbOd proizvodprikaz = null;
         public VoditeljNabave()
         {
@@ -39,12 +39,12 @@ namespace Aplikacija_ZUSMR
                 proizvodjac.Activate();
             }   
         }
-        NarudzbenicaPrikaz narudzbenica;
+        PrimkaPrikaz narudzbenica;
         private void narudzbenicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (narudzbenica == null || narudzbenica.IsDisposed)
             {
-                narudzbenica = new NarudzbenicaPrikaz();
+                narudzbenica = new PrimkaPrikaz();
                 narudzbenica.MdiParent = this;
                 narudzbenica.Show();
                 narudzbenica.Dock = DockStyle.Fill;

@@ -16,15 +16,15 @@ namespace Aplikacija_ZUSMR
         {
             InitializeComponent();
 
-            string upit = "select * from Proizvodac";
-            List<Proizvodac> proizvodac = Proizvodac.selectUpit(upit);
-            Proizvodac b = new Proizvodac();
-            b.ID_proizvodac = 0;
+            string upit = "select * from Poslovni_entiteti WHERE ID_TipEntiteta = (Select ID_TipEntiteta from Tip_poslovnog_entiteta WHERE Tip = 'Proizvodac')";
+            List<PoslovniEntiteti> proizvodac = PoslovniEntiteti.selectUpit(upit);
+            PoslovniEntiteti b = new PoslovniEntiteti();
+            b.ID_PoslovnogEntiteta = 0;
             b.Naziv = "";
             proizvodac.Insert(0,b);
             this.cmbProizvodac.DataSource = proizvodac;
             this.cmbProizvodac.DisplayMember = "Naziv";
-            this.cmbProizvodac.ValueMember = "ID_proizvodac";
+            this.cmbProizvodac.ValueMember = "ID_PoslovnogEntiteta";
             this.cmbProizvodac.SelectedIndex = 0;
 
             upit = "select * from Tip_proizvoda";
@@ -47,8 +47,7 @@ namespace Aplikacija_ZUSMR
                 this.dgvProizvodi.Rows.Clear();
                
             }
-
-            string upit = "select p.ID_proizvoda as ID_proizvoda, p.Naziv as Naziv, p.Cijena as Cijena, p.Kolicina as Kolicina, s.Naziv as Skladiste, t.Tip as Tip, pr.Naziv as Proizvodac,jm.JedinicaMjere as JedinicaMjere from Proizvod p join Skladiste s on p.ID_skladista =s.ID_skaldista join Proizvodac pr on p.ID_proizvodaca = pr.ID_proizvodac join Tip_proizvoda t on p.ID_tip = t.ID_tip join Jedinice_Mjere jm on p.ID_JediniceMjere = jm.ID_JediniceMjere";
+            string upit = "select p.ID_proizvoda as ID_proizvoda, p.Naziv as Naziv, p.Cijena as Cijena, s.Naziv as Skladiste, t.Tip as Tip, pe.Naziv as Proizvodac,jm.JedinicaMjere as JedinicaMjere from Proizvod p join Skladiste s on p.ID_skladista =s.ID_skaldista join Tip_proizvoda t on p.ID_tip = t.ID_tip join Jedinice_Mjere jm on p.ID_JediniceMjere = jm.ID_JediniceMjere join Poslovni_entiteti pe ON p.ID_PoslovnogEntiteta = pe.ID_PoslovnogEntiteta";
             List<Proizvod> proizvodi = Proizvod.selectUpit(upit, 1);
 
             foreach (Proizvod a in proizvodi)
@@ -137,11 +136,10 @@ namespace Aplikacija_ZUSMR
             {
                 tip = cmbTip.SelectedValue.ToString();
             }
-
-            string upit = "select p.ID_proizvoda as ID_proizvoda, p.Naziv as Naziv, p.Cijena as Cijena, p.Kolicina as Kolicina, s.Naziv as Skladiste, t.Tip as Tip, pr.Naziv as Proizvodac from Proizvod p join Skladiste s on p.ID_skladista =s.ID_skaldista join Proizvodac pr on p.ID_proizvodaca = pr.ID_proizvodac join Tip_proizvoda t on p.ID_tip = t.ID_tip"
+            string upit = "select p.ID_proizvoda as ID_proizvoda, p.Naziv as Naziv, p.Cijena as Cijena, s.Naziv as Skladiste, t.Tip as Tip, pe.Naziv as Proizvodac,jm.JedinicaMjere as JedinicaMjere from Proizvod p join Skladiste s on p.ID_skladista =s.ID_skaldista join Tip_proizvoda t on p.ID_tip = t.ID_tip join Jedinice_Mjere jm on p.ID_JediniceMjere = jm.ID_JediniceMjere join Poslovni_entiteti pe ON p.ID_PoslovnogEntiteta = pe.ID_PoslovnogEntiteta"
                 + " Where (p.Cijena Between " + cijenaOd + " AND " + cijenaDo + ")" + "AND"
                 + "(p.Naziv like '%" + naziv + "%')" + "AND"
-                + "(p.ID_proizvodaca LIKE '%" + proizvodac + "%')" + "AND"
+                + "(p.ID_PoslovnogEntiteta LIKE '%" + proizvodac + "%')" + "AND"
                 + "(p.ID_tip LIKE '%"+tip+"%')";
 
             List<Proizvod> proizvodi = Proizvod.selectUpit(upit, 1);
@@ -152,10 +150,9 @@ namespace Aplikacija_ZUSMR
                 row.Cells[0].Value = a.ID_proizvoda;
                 row.Cells[1].Value = a.Naziv;
                 row.Cells[2].Value = a.Cijena;
-                row.Cells[3].Value = a.Kolicina;
-                row.Cells[4].Value = a.NazivProizvodaca;
-                row.Cells[5].Value = a.NazivSkladista;
-                row.Cells[6].Value = a.Tip;
+                row.Cells[3].Value = a.NazivProizvodaca;
+                row.Cells[4].Value = a.NazivSkladista;
+                row.Cells[5].Value = a.Tip;
                 this.dgvProizvodi.Rows.Add(row);
             }
 

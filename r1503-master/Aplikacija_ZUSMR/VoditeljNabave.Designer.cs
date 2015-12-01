@@ -56,8 +56,8 @@
             // 
             this.narudzbenicaToolStripMenuItem.Name = "narudzbenicaToolStripMenuItem";
             this.narudzbenicaToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.narudzbenicaToolStripMenuItem.Text = "Narudžbenica";
+            this.narudzbenicaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.narudzbenicaToolStripMenuItem.Text = "Primka";
             this.narudzbenicaToolStripMenuItem.Click += new System.EventHandler(this.narudzbenicaToolStripMenuItem_Click);
             // 
             // proizvodacToolStripMenuItem

@@ -151,5 +151,69 @@ namespace Aplikacija_ZUSMR
                 stNarudzbe.Activate();
             }  
         }
+
+        private void poslovniDokumentiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        PrimkaPrikaz narudzbenica;
+        private void primkaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                if (narudzbenica == null || narudzbenica.IsDisposed)
+                {
+                    narudzbenica = new PrimkaPrikaz();
+                    narudzbenica.MdiParent = this;
+                    narudzbenica.Show();
+                    narudzbenica.Dock = DockStyle.Fill;
+                    narudzbenica.WindowState = FormWindowState.Maximized;
+
+
+                }
+
+                else
+                {
+                    narudzbenica.Activate();
+                }
+            
+        }
+        KreirajIzdatnicu racun;
+        private void otpremnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (racun == null || racun.IsDisposed)
+            {
+                racun = new KreirajIzdatnicu();
+                racun.MdiParent = this;
+                racun.Show();
+                racun.Dock = DockStyle.Fill;
+                racun.WindowState = FormWindowState.Maximized;
+
+
+            }
+
+            else
+            {
+                racun.Activate();
+            }   
+        }
+        PoslovniEntitetiPrikaz kupac;
+        private void prikazPoslovnihEntitetaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (kupac == null || kupac.IsDisposed)
+            {
+                kupac = new PoslovniEntitetiPrikaz();
+                kupac.MdiParent = this;
+                kupac.Show();
+                kupac.Dock = DockStyle.Fill;
+                kupac.WindowState = FormWindowState.Maximized;
+
+
+            }
+
+            else
+            {
+                kupac.Activate();
+            }   
+        }
     }
 }

@@ -75,7 +75,7 @@
             // 
             // ID_strojeva
             // 
-            this.ID_strojeva.HeaderText = "ID strojeva/opreme";
+            this.ID_strojeva.HeaderText = "Šifra opreme";
             this.ID_strojeva.Name = "ID_strojeva";
             this.ID_strojeva.ReadOnly = true;
             this.ID_strojeva.Width = 150;

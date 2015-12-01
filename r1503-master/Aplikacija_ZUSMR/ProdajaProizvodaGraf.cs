@@ -103,15 +103,6 @@ namespace Aplikacija_ZUSMR
                 timer1.Interval = 2000;
                 timer1.Start();
             }
-            
-
-                //iznad je bilo u odaberi
-
-                
-
-            
-
-            
 
         }
 

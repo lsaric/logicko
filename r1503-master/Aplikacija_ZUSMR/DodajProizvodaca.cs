@@ -29,13 +29,13 @@ namespace Aplikacija_ZUSMR
             }
             if (U == 1 && uneseno)
             {
-                string sqlUpit = "insert into Proizvodac values ('" + txtNaziv.Text + "')";
+                string sqlUpit = "insert into Poslovni_entiteti values ('" + txtNaziv.Text + "','" + txtKontakt.Text + "',(Select ID_TipEntiteta from Tip_poslovnog_entiteta WHERE Tip = 'Proizvodac'))";
                 Baza.Instance.IzvrsavanjeUpita(sqlUpit);
                 this.Close();
             }
             else if (U == 2 && uneseno)
             {
-                string upit = "UPDATE Proizvodac SET  Naziv = '" + txtNaziv.Text + "' WHERE  ID_proizvodac = " + int.Parse(txtID.Text.ToString());
+                string upit = "UPDATE Poslovni_entiteti SET  Naziv = '" + txtNaziv.Text + "', Kontakt = '" + txtKontakt.Text + "' WHERE  ID_PoslovnogEntiteta = " + int.Parse(txtID.Text.ToString());
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }

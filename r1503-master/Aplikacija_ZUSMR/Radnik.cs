@@ -18,8 +18,21 @@ namespace Aplikacija_ZUSMR
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči radnika!";
         }
-        nmbOd nmb;
+        
         private void proizvodiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
+        nmbOd nmb;
+        private void pretragaProizvodaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (nmb == null || nmb.IsDisposed)
             {
@@ -37,17 +50,24 @@ namespace Aplikacija_ZUSMR
                 nmb.Activate();
             }   
         }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        StatistikaNarudzbe stNarudzbe;
+        private void prikazStanjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Login login = new Login();
-            login.ShowDialog();
-        }
+            if (stNarudzbe == null || stNarudzbe.IsDisposed)
+            {
+                stNarudzbe = new StatistikaNarudzbe();
+                stNarudzbe.MdiParent = this;
+                stNarudzbe.Show();
+                stNarudzbe.Dock = DockStyle.Fill;
+                stNarudzbe.WindowState = FormWindowState.Maximized;
 
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
+            }
+
+            else
+            {
+                stNarudzbe.Activate();
+            }  
         }
     }
 }

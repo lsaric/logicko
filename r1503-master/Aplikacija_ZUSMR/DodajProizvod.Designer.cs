@@ -70,48 +70,49 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(87, 32);
+            this.txtID.Location = new System.Drawing.Point(92, 32);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(185, 20);
+            this.txtID.Size = new System.Drawing.Size(180, 20);
             this.txtID.TabIndex = 2;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(87, 80);
+            this.txtNaziv.Location = new System.Drawing.Point(92, 80);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(185, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(180, 20);
             this.txtNaziv.TabIndex = 3;
             // 
             // txtCijena
             // 
-            this.txtCijena.Location = new System.Drawing.Point(87, 106);
+            this.txtCijena.Location = new System.Drawing.Point(92, 106);
             this.txtCijena.Name = "txtCijena";
-            this.txtCijena.Size = new System.Drawing.Size(185, 20);
+            this.txtCijena.Size = new System.Drawing.Size(180, 20);
             this.txtCijena.TabIndex = 4;
             // 
             // cmbProizvodac
             // 
             this.cmbProizvodac.FormattingEnabled = true;
-            this.cmbProizvodac.Location = new System.Drawing.Point(87, 182);
+            this.cmbProizvodac.Location = new System.Drawing.Point(92, 182);
             this.cmbProizvodac.Name = "cmbProizvodac";
-            this.cmbProizvodac.Size = new System.Drawing.Size(185, 21);
+            this.cmbProizvodac.Size = new System.Drawing.Size(180, 21);
             this.cmbProizvodac.TabIndex = 6;
             // 
             // cmbTip
             // 
             this.cmbTip.FormattingEnabled = true;
-            this.cmbTip.Location = new System.Drawing.Point(87, 209);
+            this.cmbTip.Location = new System.Drawing.Point(92, 209);
             this.cmbTip.Name = "cmbTip";
-            this.cmbTip.Size = new System.Drawing.Size(185, 21);
+            this.cmbTip.Size = new System.Drawing.Size(180, 21);
             this.cmbTip.TabIndex = 7;
             // 
             // cmbSkladiste
             // 
             this.cmbSkladiste.FormattingEnabled = true;
-            this.cmbSkladiste.Location = new System.Drawing.Point(87, 236);
+            this.cmbSkladiste.Location = new System.Drawing.Point(92, 236);
             this.cmbSkladiste.Name = "cmbSkladiste";
-            this.cmbSkladiste.Size = new System.Drawing.Size(185, 21);
+            this.cmbSkladiste.Size = new System.Drawing.Size(180, 21);
             this.cmbSkladiste.TabIndex = 8;
             // 
             // lblID
@@ -179,10 +180,10 @@
             // 
             // txtKolicina
             // 
-            this.txtKolicina.Location = new System.Drawing.Point(87, 135);
+            this.txtKolicina.Location = new System.Drawing.Point(92, 135);
             this.txtKolicina.Name = "txtKolicina";
             this.txtKolicina.ReadOnly = true;
-            this.txtKolicina.Size = new System.Drawing.Size(185, 20);
+            this.txtKolicina.Size = new System.Drawing.Size(180, 20);
             this.txtKolicina.TabIndex = 5;
             // 
             // label1

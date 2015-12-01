@@ -230,7 +230,6 @@
             this.Kolicina.HeaderText = "Količina";
             this.Kolicina.Name = "Kolicina";
             this.Kolicina.ReadOnly = true;
-            this.Kolicina.Width = 70;
             // 
             // NazivSkladista
             // 

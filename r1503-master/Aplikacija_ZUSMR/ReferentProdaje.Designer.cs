@@ -53,15 +53,15 @@
             // kupacToolStripMenuItem
             // 
             this.kupacToolStripMenuItem.Name = "kupacToolStripMenuItem";
-            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.kupacToolStripMenuItem.Text = "Kupac";
+            this.kupacToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.kupacToolStripMenuItem.Text = "Poslovni entiteti";
             this.kupacToolStripMenuItem.Click += new System.EventHandler(this.kupacToolStripMenuItem_Click);
             // 
             // računiToolStripMenuItem
             // 
             this.računiToolStripMenuItem.Name = "računiToolStripMenuItem";
-            this.računiToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.računiToolStripMenuItem.Text = "Računi";
+            this.računiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.računiToolStripMenuItem.Text = "Izdatnice";
             this.računiToolStripMenuItem.Click += new System.EventHandler(this.računiToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1

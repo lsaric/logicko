@@ -12,19 +12,19 @@ namespace Aplikacija_ZUSMR
 {
     public partial class ReferentProdaje : Form
     {
-        KupciPrikaz PrikazKupci = null;
-        KreirajRacun kr = null;
+        PoslovniEntitetiPrikaz PrikazKupci = null;
+        KreirajIzdatnicu kr = null;
         public ReferentProdaje()
         {
             InitializeComponent();
             this.statusPoruka.Text = "Dobrodošli " + Login.ime + " " + Login.prezime + " nalazite se na kontrolnoj ploči refrenta prodaje!";
         }
-        KupciPrikaz kupac;
+        PoslovniEntitetiPrikaz kupac;
         private void kupacToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (kupac == null || kupac.IsDisposed)
             {
-                kupac = new KupciPrikaz();
+                kupac = new PoslovniEntitetiPrikaz();
                 kupac.MdiParent = this;
                 kupac.Show();
                 kupac.Dock = DockStyle.Fill;
@@ -38,12 +38,12 @@ namespace Aplikacija_ZUSMR
                 kupac.Activate();
             }   
         }
-        KreirajRacun racun;
+        KreirajIzdatnicu racun;
         private void računiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (racun == null || racun.IsDisposed)
             {
-                racun = new KreirajRacun();
+                racun = new KreirajIzdatnicu();
                 racun.MdiParent = this;
                 racun.Show();
                 racun.Dock = DockStyle.Fill;

@@ -28,7 +28,7 @@ namespace Aplikacija_ZUSMR
                 db.ID_proizvoda = int.Parse(dr["ID_proizvoda"].ToString());
                 db.Naziv = dr["Naziv"].ToString();
                 db.Cijena = int.Parse(dr["Cijena"].ToString());
-                db.Kolicina = int.Parse(dr["Kolicina"].ToString());
+                db.Kolicina = 0;
                 if (tip == 1)
                 {
                     db.NazivProizvodaca = dr["Skladiste"].ToString();
@@ -42,8 +42,40 @@ namespace Aplikacija_ZUSMR
             }
             dr.Close();
 
+            foreach (Proizvod a in proizvod)
+            {
+                a.Kolicina = izracunajKolicinuProizvoda(a.ID_proizvoda);
+            }
+
             return proizvod;
 
         }
+
+        private static int izracunajKolicinuProizvoda(int id)
+        {
+            int zaprimljenaKolicina;
+            int otpremljenaKolicina;
+            try
+            {
+                zaprimljenaKolicina = (int)(Baza.Instance.VrijednostUpita("Select SUM(Kolicina) as Kolicina from Stavke_dokumenta join Poslovni_dokumenti pd on Stavke_dokumenta.ID_dokumenta=pd.ID_dokumenta where Stavke_dokumenta.ID_proizvoda = "+id+" AND pd.ID_TipDokumenta = (Select ID_TipDokumenta from Tip_poslovnog_dokumenta WHERE Tip = 'Primka')"));
+            }
+            catch(Exception e){
+                zaprimljenaKolicina = 0;
+            }
+
+            try
+            {
+                otpremljenaKolicina = (int)Baza.Instance.VrijednostUpita("Select SUM(Kolicina) as Kolicina from Stavke_dokumenta join Poslovni_dokumenti pd on Stavke_dokumenta.ID_dokumenta=pd.ID_dokumenta where Stavke_dokumenta.ID_proizvoda = "+id+" AND pd.ID_TipDokumenta = (Select ID_TipDokumenta from Tip_poslovnog_dokumenta WHERE Tip = 'Otpremnica')");
+            }
+            catch (Exception e)
+            {
+                otpremljenaKolicina = 0;
+            }
+
+
+
+            return (zaprimljenaKolicina - otpremljenaKolicina);
+        }
+
     }
 }

@@ -56,12 +56,11 @@
       <DependentUpon>Administrator.cs</DependentUpon>
     </Compile>
     <Compile Include="Baza.cs" />
-    <Compile Include="ConnectionString.cs" />
-    <Compile Include="DodajNarudzbenicu.cs">
+    <Compile Include="DodajPrimku.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DodajNarudzbenicu.Designer.cs">
-      <DependentUpon>DodajNarudzbenicu.cs</DependentUpon>
+    <Compile Include="DodajPrimku.Designer.cs">
+      <DependentUpon>DodajPrimku.cs</DependentUpon>
     </Compile>
     <Compile Include="DodajProizvod.cs">
       <SubType>Form</SubType>
@@ -75,11 +74,11 @@
     <Compile Include="DodajProizvodaca.Designer.cs">
       <DependentUpon>DodajProizvodaca.cs</DependentUpon>
     </Compile>
-    <Compile Include="DodajKupca.cs">
+    <Compile Include="DodajPoslovniEntitet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DodajKupca.Designer.cs">
-      <DependentUpon>DodajKupca.cs</DependentUpon>
+    <Compile Include="DodajPoslovniEntitet.Designer.cs">
+      <DependentUpon>DodajPoslovniEntitet.cs</DependentUpon>
     </Compile>
     <Compile Include="DodajSkladiste.cs">
       <SubType>Form</SubType>
@@ -112,18 +111,18 @@
       <DependentUpon>Dodaj_Tip_Zaposlenja.cs</DependentUpon>
     </Compile>
     <Compile Include="JedinicaMjere.cs" />
-    <Compile Include="KreirajRacun.cs">
+    <Compile Include="KreirajIzdatnicu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KreirajRacun.Designer.cs">
-      <DependentUpon>KreirajRacun.cs</DependentUpon>
+    <Compile Include="KreirajIzdatnicu.Designer.cs">
+      <DependentUpon>KreirajIzdatnicu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kupac.cs" />
-    <Compile Include="KupciPrikaz.cs">
+    <Compile Include="PoslovniEntiteti.cs" />
+    <Compile Include="PoslovniEntitetiPrikaz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KupciPrikaz.Designer.cs">
-      <DependentUpon>KupciPrikaz.cs</DependentUpon>
+    <Compile Include="PoslovniEntitetiPrikaz.Designer.cs">
+      <DependentUpon>PoslovniEntitetiPrikaz.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -131,12 +130,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Narudzbenica.cs" />
-    <Compile Include="NarudzbenicaPrikaz.cs">
+    <Compile Include="PoslovniDokument.cs" />
+    <Compile Include="PrimkaPrikaz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NarudzbenicaPrikaz.Designer.cs">
-      <DependentUpon>NarudzbenicaPrikaz.cs</DependentUpon>
+    <Compile Include="PrimkaPrikaz.Designer.cs">
+      <DependentUpon>PrimkaPrikaz.cs</DependentUpon>
     </Compile>
     <Compile Include="ProdajaProizvodaGraf.cs">
       <SubType>Form</SubType>
@@ -192,6 +191,7 @@
     <Compile Include="Strojevi_i_Oprema_Prikaz.Designer.cs">
       <DependentUpon>Strojevi_i_Oprema_Prikaz.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipPoslovnogEntiteta.cs" />
     <Compile Include="TipProizvodaPrikaz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,8 +234,8 @@
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DodajNarudzbenicu.resx">
-      <DependentUpon>DodajNarudzbenicu.cs</DependentUpon>
+    <EmbeddedResource Include="DodajPrimku.resx">
+      <DependentUpon>DodajPrimku.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DodajProizvod.resx">
       <DependentUpon>DodajProizvod.cs</DependentUpon>
@@ -243,8 +243,8 @@
     <EmbeddedResource Include="DodajProizvodaca.resx">
       <DependentUpon>DodajProizvodaca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DodajKupca.resx">
-      <DependentUpon>DodajKupca.cs</DependentUpon>
+    <EmbeddedResource Include="DodajPoslovniEntitet.resx">
+      <DependentUpon>DodajPoslovniEntitet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DodajSkladiste.resx">
       <DependentUpon>DodajSkladiste.cs</DependentUpon>
@@ -261,17 +261,17 @@
     <EmbeddedResource Include="Dodaj_Tip_Zaposlenja.resx">
       <DependentUpon>Dodaj_Tip_Zaposlenja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KreirajRacun.resx">
-      <DependentUpon>KreirajRacun.cs</DependentUpon>
+    <EmbeddedResource Include="KreirajIzdatnicu.resx">
+      <DependentUpon>KreirajIzdatnicu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KupciPrikaz.resx">
-      <DependentUpon>KupciPrikaz.cs</DependentUpon>
+    <EmbeddedResource Include="PoslovniEntitetiPrikaz.resx">
+      <DependentUpon>PoslovniEntitetiPrikaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NarudzbenicaPrikaz.resx">
-      <DependentUpon>NarudzbenicaPrikaz.cs</DependentUpon>
+    <EmbeddedResource Include="PrimkaPrikaz.resx">
+      <DependentUpon>PrimkaPrikaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProdajaProizvodaGraf.resx">
       <DependentUpon>ProdajaProizvodaGraf.cs</DependentUpon>

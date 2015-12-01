@@ -42,7 +42,7 @@
             // 
             // btnUnos
             // 
-            this.btnUnos.Location = new System.Drawing.Point(30, 195);
+            this.btnUnos.Location = new System.Drawing.Point(30, 208);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(108, 33);
             this.btnUnos.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(151, 195);
+            this.btnOdustani.Location = new System.Drawing.Point(151, 208);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(108, 33);
             this.btnOdustani.TabIndex = 1;
@@ -63,7 +63,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(27, 39);
+            this.lblID.Location = new System.Drawing.Point(22, 39);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(18, 13);
             this.lblID.TabIndex = 2;
@@ -72,7 +72,7 @@
             // lblNaziv
             // 
             this.lblNaziv.AutoSize = true;
-            this.lblNaziv.Location = new System.Drawing.Point(27, 68);
+            this.lblNaziv.Location = new System.Drawing.Point(22, 68);
             this.lblNaziv.Name = "lblNaziv";
             this.lblNaziv.Size = new System.Drawing.Size(34, 13);
             this.lblNaziv.TabIndex = 3;
@@ -81,7 +81,7 @@
             // lblKapacitet
             // 
             this.lblKapacitet.AutoSize = true;
-            this.lblKapacitet.Location = new System.Drawing.Point(27, 138);
+            this.lblKapacitet.Location = new System.Drawing.Point(22, 138);
             this.lblKapacitet.Name = "lblKapacitet";
             this.lblKapacitet.Size = new System.Drawing.Size(52, 13);
             this.lblKapacitet.TabIndex = 4;
@@ -113,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 167);
+            this.label1.Location = new System.Drawing.Point(22, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 8;
@@ -122,7 +122,7 @@
             // cmbJedinicaMjere
             // 
             this.cmbJedinicaMjere.FormattingEnabled = true;
-            this.cmbJedinicaMjere.Location = new System.Drawing.Point(102, 165);
+            this.cmbJedinicaMjere.Location = new System.Drawing.Point(102, 170);
             this.cmbJedinicaMjere.Name = "cmbJedinicaMjere";
             this.cmbJedinicaMjere.Size = new System.Drawing.Size(157, 21);
             this.cmbJedinicaMjere.TabIndex = 9;

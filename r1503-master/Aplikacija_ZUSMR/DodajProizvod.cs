@@ -15,7 +15,7 @@ namespace Aplikacija_ZUSMR
     public partial class DodajProizvod : Form
     {
         private int U;
-        private List<Proizvodac> proizvodac;
+        private List<PoslovniEntiteti> proizvodac;
         private List<Tip_proizvoda> tip;
         private List<Skladiste> skladista;
         private List<JedinicaMjere> jediniceMjere;
@@ -24,11 +24,11 @@ namespace Aplikacija_ZUSMR
             this.U = U;
             InitializeComponent();
 
-            string upit = "select * from Proizvodac";
-            proizvodac = Proizvodac.selectUpit(upit);
+            string upit = "select * from Poslovni_entiteti WHERE ID_TipEntiteta = (Select ID_TipEntiteta from Tip_poslovnog_entiteta WHERE Tip = 'Proizvodac')";
+            proizvodac = PoslovniEntiteti.selectUpit(upit);
             this.cmbProizvodac.DataSource = proizvodac;
             this.cmbProizvodac.DisplayMember = "Naziv";
-            this.cmbProizvodac.ValueMember = "ID_proizvodac";
+            this.cmbProizvodac.ValueMember = "ID_PoslovnogEntiteta";
 
             upit = "select * from Tip_proizvoda";
             tip = Tip_proizvoda.selectUpit(upit);
@@ -52,6 +52,7 @@ namespace Aplikacija_ZUSMR
             if (this.U == 1)
             {
                 txtKolicina.Text = "0";
+                
             }
             else if (this.U == 2)
             {
@@ -69,13 +70,13 @@ namespace Aplikacija_ZUSMR
             string odgDodavanja = izracunajKapacitetSkladista((int)this.cmbSkladiste.SelectedValue, int.Parse(txtKolicina.Text));
             if (U == 1 && uneseno && odgDodavanja=="OK")
             {
-                string sqlUpit = "insert into Proizvod values ('" + txtNaziv.Text + "','" + txtCijena.Text + "','" + txtKolicina.Text + "'," + proizvodac.ElementAt((cmbProizvodac.SelectedIndex)).ID_proizvodac + "," + tip.ElementAt((cmbTip.SelectedIndex)).ID_tip + "," + (int)this.cmbSkladiste.SelectedValue + "," + jediniceMjere.ElementAt((this.cmbJedinicaMjere.SelectedIndex)).ID_JediniceMjere + ")";
+                string sqlUpit = "insert into Proizvod values ('" + txtNaziv.Text + "'," + txtCijena.Text + ","  + proizvodac.ElementAt((cmbProizvodac.SelectedIndex)).ID_PoslovnogEntiteta + "," + tip.ElementAt((cmbTip.SelectedIndex)).ID_tip + "," + (int)this.cmbSkladiste.SelectedValue + "," + jediniceMjere.ElementAt((this.cmbJedinicaMjere.SelectedIndex)).ID_JediniceMjere + ")";
                 Baza.Instance.IzvrsavanjeUpita(sqlUpit);
                 this.Close();
             }
             else if (U == 2 && uneseno && odgDodavanja == "OK")
             {
-                string upit = "UPDATE Proizvod SET Naziv = '" + txtNaziv.Text + "', Cijena = '" + txtCijena.Text + "', Kolicina= '" + txtKolicina.Text + "',ID_proizvodaca=" + proizvodac.ElementAt((cmbProizvodac.SelectedIndex)).ID_proizvodac + ",ID_tip=" + tip.ElementAt((cmbTip.SelectedIndex)).ID_tip +",ID_Skladista="+(int)this.cmbSkladiste.SelectedValue +" WHERE  ID_proizvoda= " + int.Parse(txtID.Text.ToString());
+                string upit = "UPDATE Proizvod SET Naziv = '" + txtNaziv.Text + "', Cijena = '" + txtCijena.Text + "',ID_PoslovnogEntiteta=" + proizvodac.ElementAt((cmbProizvodac.SelectedIndex)).ID_PoslovnogEntiteta + ",ID_tip=" + tip.ElementAt((cmbTip.SelectedIndex)).ID_tip + ",ID_Skladista=" + (int)this.cmbSkladiste.SelectedValue + " WHERE  ID_proizvoda= " + int.Parse(txtID.Text.ToString()) + "";
                 Baza.Instance.IzvrsavanjeUpita(upit);
                 this.Close();
             }
@@ -95,68 +96,64 @@ namespace Aplikacija_ZUSMR
             
         }
 
-        private string izracunajKapacitetSkladista(int IDSkladista, int kolicinaProizvoda)
+        private string izracunajKapacitetSkladista(int IDproizvoda, int kolicinaProizvoda)
         {
+
             try
             {
-                string upit = "Select s.Kapacitet as Kapacitet, SUM(p.Kolicina) as Kolicina from Proizvod p,Skladiste s where p.ID_skladista = " + IDSkladista + " AND s.ID_skaldista = " + IDSkladista + " GROUP BY Kapacitet";
+                string upit = "Select Kapacitet, ID_skaldista as ID from Skladiste where ID_skaldista = " + IDproizvoda + "";
                 DbDataReader dr = Baza.Instance.DohvatiDataReader(upit);
                 int kapacitet = 0;
                 int trenutnaKolicina = 0;
+                int IDSkladista = 0;
                 while (dr.Read())
                 {
                     kapacitet = int.Parse(dr["Kapacitet"].ToString());
-                    try
-                    {
-                        trenutnaKolicina = int.Parse(dr["Kolicina"].ToString());
-                    }
-                    catch
-                    {
-                        trenutnaKolicina = 0;
-                    }
-                    
+                    IDSkladista = int.Parse(dr["ID"].ToString());
                 }
                 dr.Close();
+
+                List<Proizvod> proizvodi = Proizvod.selectUpit("Select * from Proizvod where ID_skladista = " + IDSkladista + "", 0);
+
+                foreach (Proizvod proizvod in proizvodi)
+                {
+                    trenutnaKolicina += proizvod.Kolicina;
+                }
 
                 int novoStanje = trenutnaKolicina + kolicinaProizvoda;
                 if (kapacitet >= novoStanje)
                 {
-                    if (kapacitet != 0)
+                    float postotakPopunjenosti = (novoStanje / kapacitet) * 100;
+                    if (postotakPopunjenosti >= 90f)
                     {
-                        float postotakPopunjenosti = (novoStanje / kapacitet) * 100;
-                        if (postotakPopunjenosti >= 90f)
+                        try
                         {
-                            try
-                            {
-                                SmtpClient client = new SmtpClient();
-                                client.Port = 587;
-                                client.Host = "smtp.gmail.com";
-                                client.EnableSsl = true;
-                                client.Timeout = 10000;
-                                client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                                client.UseDefaultCredentials = false;
-                                client.Credentials = new System.Net.NetworkCredential("AplikacijaZUSMR@gmail.com", "aplikacija");
+                            SmtpClient client = new SmtpClient();
+                            client.Port = 587;
+                            client.Host = "smtp.gmail.com";
+                            client.EnableSsl = true;
+                            client.Timeout = 10000;
+                            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                            client.UseDefaultCredentials = false;
+                            client.Credentials = new System.Net.NetworkCredential("AplikacijaZUSMR@gmail.com", "aplikacija");
 
 
-                                MailMessage mm = new MailMessage("donotreply@domain.com", "AplikacijaZUSMR@gmail.com");
+                            MailMessage mm = new MailMessage("donotreply@domain.com", "AplikacijaZUSMR@gmail.com");
 
-                                mm.Subject = "Obavijest o popunjenosti skladišta";
-                                mm.Body = "Skladište šifre: " + IDSkladista + " je popunjen + " + postotakPopunjenosti + "% !";
+                            mm.Subject = "Obavijest o popunjenosti skladišta";
+                            mm.Body = "Skladište šifre: " + IDSkladista + " je popunjen + " + postotakPopunjenosti + "% !";
 
-                                mm.BodyEncoding = UTF8Encoding.UTF8;
-                                mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+                            mm.BodyEncoding = UTF8Encoding.UTF8;
+                            mm.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
-                                client.Send(mm);
-                            }
-                            catch
-                            {
+                            client.Send(mm);
+                        }
+                        catch
+                        {
 
-                            }
-                            return "OK"; //obavijest  + moze dodati
-                    }
-                    
+                        }
 
-                        
+                        return "OK"; //obavijest + moze dodati
                     }
                     return "OK"; //uredu moze dodati
                 }
@@ -164,14 +161,14 @@ namespace Aplikacija_ZUSMR
                 {
                     return "NO"; //nema mjesta
                 }
-                
+
             }
             catch
             {
                 return "ERR";//greska s radom
             }
 
-            
+
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -211,6 +208,18 @@ namespace Aplikacija_ZUSMR
                 }
                
             
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+            int idProizvoda = int.Parse(txtID.Text);
+            string upit = "select * from Jedinice_Mjere where ID_JediniceMjere = (Select ID_JediniceMjere from Proizvod where ID_proizvoda = " + idProizvoda + ")";
+            jediniceMjere = JedinicaMjere.selectUpit(upit);
+            this.cmbJedinicaMjere.DataSource = jediniceMjere;
+            this.cmbJedinicaMjere.DisplayMember = "JMNaziv";
+            this.cmbJedinicaMjere.ValueMember = "ID_JediniceMjere";
+            cmbJedinicaMjere_SelectedValueChanged(sender, e);
 
         }
 
