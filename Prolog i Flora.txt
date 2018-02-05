@@ -1,0 +1,316 @@
+//Dodavanje gramatika .P
+
+:-import member/2 from basics.
+:-auto_table.
+
+http(http( D,P))-->[http],['://'],domena(D),['/'],putanja(P).
+http(http(D))-->[http],['://'],domena(D).
+
+nije_kljucna(X):-
+	Kljucne_rijeci=['/'],
+	not(member(X,Kljucne_rijeci)).
+
+domena(domena([X]))-->[X].
+domena(domena[X|Y]))-->[X],['.'],domena(domena(Y)).
+
+putanja(putanja[X]))-->[X].
+putanja(putanja[X|Y]))-->[X],['/'],putanja(putanja(Y)).
+
+
+-----------------------------------------------------------------------------
+//For .P
+
+for( for(I, U, IN, N ) ) -->[for],
+        ['('], inicijalizacija(I),
+        [','], uvijet(U), [','],
+        inkrement(IN), [')'],['{'],
+        naredbe(N),
+        ['}'].
+
+        inicijalizacija(inicijalizacija(I)) --> [I].
+
+        uvjet(uvjet(U)) --> [U].
+
+        inkrement(inicijalizacija(IN)) --> [IN].
+
+        naredbe(naredbe( [X] )) --> [X].
+
+        naredbe(naredbe([G | T] )) --> [G], naredbe(naredbe(T)).
+
+-----------------------------------------------------------------------------
+
+//Slaganje recenica .P
+
+recenica(recenica(S,P,O))-->subjekt(S),predikat(P),objekt(O).
+subjekt(subjekt(S))-->[S], {member(S, ['Ivek','Stef','Bara'])}.
+predikat(predikat(P))-->[P], {member(P, [voli,jede,gleda])}.
+objekt(objekt(O))-->[O], {member(O,[kobasica,sladoled])}.
+
+-------------------------------------------------------------------------------
+
+//IF-Then-Else .P
+
+selekcija( selekcija( IF,THEN))-->if(IF), then(THEN).
+selekcija( selekcija( IF,THEN, ELSE))-->if(IF), then(THEN), else(ELSE).
+
+if(if(U))--> [if], ['('], uvjet(U), [')'].
+
+uvjet( uvjet[U])) --> [U], {U \= ')'}.
+uvjet( uvjet[U|O])) --> [U], uvjet(uvjet(O)), {U \= ')'}.
+
+then(then(T))-->[then], ['{'], naredbe(T),['}'].
+else(else(T))-->[else], ['{'], naredbe(T),['}'].
+
+naredbe( naredbe([N]))--> [N],{ N \= '}'}.
+naredbe( naredbe( [N|O])) -->[N], naredbe(naredbe(O)), {N \= '}'}.
+
+
+-----------------------------------------------------------------------------
+
+//Predak i baka flr
+
+Joza:osoba[ roditelj->{ Stef, Bara }, spol->musko ].
+Stef:osoba[ roditelj->{ Stefica, Ivek }, spol->musko ].
+Bara:osoba[ roditelj->{ Slavek, Marica }, spol->zensko ].
+Ivek:osoba[ spol->musko ].
+Stefica:osoba[ spol->zensko ].
+Slavek:osoba[ spol->musko ].
+Marica:osoba[ spol->zensko ].
+
+//baka
+
+?U[baka->?B]:-
+        ?U[roditelj->?X],
+        ?X[roditelj->?B],
+        ?B[spol->zensko].
+
+//predak
+
+?U[predak->?P]:-?U[roditelj->?P].
+?U[predak->?P]:-
+        ?X[roditelj->?P],
+        ?U[predak->X].
+
+
+
+
+--------------------------------------------------------------------------
+//Za rename datoteka flr
+
+shell[rename( ?d1,?d2)]:-
+        rename(?d1,?d2)@\plg(shell).
+
+
+-----------------------------------------------------------------------------
+
+//Zaposlenici place flr
+
+zaposlenik::osoba.
+
+kupac::osoba.
+
+menadzer::zaposlenik.
+
+direktor::menadzer.
+
+
+stefica:kupac.
+
+ivek:zaposlenik.
+
+joza:menadzer.
+
+bara:direktor.
+
+
+ivek[ placa->100 ].
+
+joza[ placa->200 ].
+
+bara[ placa->300 ].
+
+
+direktor[ukupne_place -> ?p] :- ?p \is 0.
+
+direktor[ukupne_place -> ?p] :- direktor[placa-> ?p1], ?p \is ?p + ?p1. 
+
+-------------------------------------------------------------------------------
+
+//Zaposlenici hijerarhija uml flr
+
+zaposlenik[
+ime => _string,
+
+	prezime => _string,
+
+	nadredjeni => menadzer,
+
+	odjel => _string
+    ].
+
+
+menadzer[
+podredjeni(_string) => struct
+].
+
+
+?menadzer[podredjeni(?odjel)->?y] :- ?y[nadredjeni->?menadzer, odjel->?odjel].
+
+
+ivek:zaposlenik[
+ime->Ivan,
+	
+		prezime->Presvetli,
+	
+		nadredjeni->bara,
+	
+		odjel->Marketing ].
+
+joza:zaposlenik[
+ime->Josip,
+	
+		prezime->Prikratki,
+	
+		nadredjeni->bara,
+	
+		odjel->Marketing ].
+
+bara:menadzer[
+ime->Barica,
+	
+	      prezime->Jambrek ].
+
+
+
+--------------------------------------------------------------------------------------
+
+//Osobe starost flr
+
+odrasla_osoba::osoba.
+
+dijete::osoba.
+
+teenager::osoba.
+
+
+ivek:osoba[ godina->13 ].
+
+joza:osoba[ godina->24 ].
+
+bara:osoba[ godina->19 ].
+
+
+
+?o:dijete :- ?o[godina->?g], ?g<18.
+
+?o:teenager :- ?o[godina->?g], ?g>=13, ?g=<19.
+
+?o:odrasla_osoba :- ?o[godina->?g], ?g>=18.
+
+----------------------------------------------------------------------------------------
+
+//Cvorovi flr
+
+a:cvor[brid->{b,c,d}].
+
+b:cvor[brid->{c,e}].
+
+c:cvor[brid->{e,d}].
+
+d:cvor[brid->f].
+e:cvor[brid->f].
+
+f:cvor.
+
+obojeni_cvor :: cvor.
+
+x:obojeni_cvor [brid->a, boja->zuta].
+
+y:obojeni_cvor [brid->b, boja->plava].
+
+z:obojeni_cvor [brid->c, boja->zelena].
+
+
+?cvor[put->?x] :- ?cvor[brid->?x].
+
+?cvor[put->?x] :- ?cvor[brid->?y], ?y[put->?x].
+
+
+?cvor[duljina(?x)->?d] :- ?cvor[brid->?x], ?d \is 1.
+
+?cvor[duljina(?x)->?d] :- ?cvor[brid->?y], ?y[duljina(?x)->?d1], ?d \is ?d1+1.
+
+
+?cvor[put2->?y] :- ?cvor[brid->?x], \+ ?cvor:obojeni_cvor.
+
+?cvor[put2->?y] :- ?cvor[brid->?y], ?y[put2->?x], \+ ?y:obojeni_cvor, \+ ?x:obojeni_cvor.
+
+
+------------------------------------------------------------------------------------------
+
+//FLORA upiti
+
+Flora2
+
+
+doktori.flr
+
+?_ : osoba[ime -> ?ime, prezime -> ?prezime].
+-- sve varijable pocinju s ?
+-- (?_ je "don't care" varijabla)
+
+
+?_ : pacijent[prezime->?prezime, starost(2015)->?starost].
+
+?_ : pacijent[ime->?ime, starost(2015)-> ?_s], ?_s > 40.
+
+?_ : doktor[prezime->Presvetli, pacijenti->?_pac], ?_pac[ime->?ime, prezime->?prezime].
+ ILI
+
+(?_dok : doktor[prezime->Presvetli]).pacijenti[ime->?ime, prezime->?prezime].
+
+ivek[radno_vrijeme->od_do(?od, ?do)].
+ ILI
+
+ivek.radno_vrijeme = od_do(?od, ?do).
+
+
+?_ : doktor[ime-> ?ime, radno_vrijeme -> ?od_do].
+
+
+-----------------------------------------
+
+
+agg.flr
+
+agregirajuæe funkcije: avg, max, min, sum,... , collectbag i collectset
+
+
+?x = avg{?_g | ?_:osoba[godine->?_g] }.
+
+?x = avg{?_g [?_s] | ?_:osoba[godine->?_g, spol->?_s]}. -- grupira prosjeke godina po spolu (SQL analogno:  SELECT spol, avg(godine) FROM osoba GROUP BY spol;)
+
+?x = collectset{?_o [?_s] | ?_o : osoba[spol->?_s] }. - liste ljudi po spolu
+
+
+
+moduli: 
+[datoteka>>modul].
+
+[agg>>go1].
+[agg>>go2].
+
+?x:osoba @ go1.
+?x:osoba @ ?modul.
+writeln('Pozdrav iz Prologa') @ \prolog.
+
+predikat @ \prolog(naziv_modula).
+
+
+?x = [1,2,3], member(?y, ?x) @ \prolog(basics).
+
+
+
+ažuriranje baze znanja: insert, insertall, delete, deleteall, erase, eraseall, insertrule, deleterule
+
+insert{ana:osoba @ go1}.
